@@ -1,0 +1,176 @@
+zoom: 0.59999999999999998
+offsetX: 256.17777777777764
+offsetY: 566.48888888888905
+children:
+- id: 0
+  type: Search
+  model:
+    searchPrefix: d
+    searchedTagExact: ''
+    searchTagIcon:
+      value: 
+    searchedText:
+      text: ''
+      textMatchType: Contains
+      matchCase: false
+    searchType: SearchAll
+  position:
+    x: 1541
+    y: 1212
+  variables:
+  - name: searchText
+    value: result.SearchedText
+  - name: searchTag
+    value: result.SearchedTag
+  children:
+  - id: 1
+    type: Custom result
+    model:
+      name: Go to {searchText} in Discord
+      previewImageProviderSetting:
+        value: iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAITcAACE3ATNYn3oAABMWSURBVHhe7Z3LjhxFFoZ5BB6BR/Aj8ARgmS7bK6qqWc4IeYOXY29HSAgJsZtBXoE0SC1YsBkkYMGK0fQOzayMhuWMZCTc1cbY0FN/VqZdnY6qvFRm5DkR3y994tJ1ycyKc+LEiRMRLyHfen3+08uz+dmV6/PV1fU/F7Pl6u5sefb+7Hj10dFi9ZW4vji7/4zj84u9bL22er8+q/hMffb6O27MH76q79R3l5eBEBpLlZFvDHxj3LPF+enRcvUgaMQR0TXoWtb/fiIHIUckB1FeOkKoi2TsMqCbb63elqG36rWNUjkG3YvuiYgBoZrK3n3Ts28MJmhMqaB71L0qUljf+yvlY0AoD1U9fGEEjnv3oSgcgiKdjUMgQkDpSQ1bYXCRVDMwbrdMkbRcnr9JdIBcS0Y/W57/qWjQgYYOzejZyXHiDJALbff0oQYN/SEyQGalMb0aKOF9HKqcQfn4EYqvZyE+Rj8di7P7N9/6hSECiif19uvGd/JCY4RJUVSg36b8mRAaVlWYH2p8YIcqV1D+bAgdptnx2YL5eofoN8MRoL7C8BMBR4C6CMNPFBwB2ifG+JmAI0Dbms1/uoLhZ8kJ04cZS/P460bwXq1RQGZo+hBHkJmKcl0KeKCCYUEeItyHvawdAdFAolLZbvBHB6ihtlI2G+Rd6vVz2GkHBoZowL/o9eFQiAYc6sbac9Prw2AQDfgRGX4Yg6Pl+YPry9Wtspkha2JeHyLxntpa2eyQBSnkL+Zywz8YwLAwJLAjFXAQ8kNsNkMCiocmFVl+mBpmCSbQZrz/kG25wApaWEReIIYY74NJyAuML1X1YfxgFpzAeCo27CDZB8ZRcvAaZxYMK2VbQw8bwCzMEAwjMv3gFWYIDhTGD97BCfQUxg+pgBPoKIwfUgMn0FIYP6QKTqBBGD+kDk5ghzB+yAWcQE3axCP0oACShTqBja4dr64GHxBA4rwxf/hqaQZ5Sgt7KO+FXFHZ8Gx+dqU0h7zEqj6ANTkuICrW82P8ABs2TiCf/QTYzAPgBU5K80hbTPcBhEl+enB2fLYI3TgAlKQ6PUjGH6AZzQwklxQk6QfQgdSSguub4sQegG68V5qPb1HmC9AT72cRMu4H6I/7fADjfoDD0DH3pTn5EvP9AMMwW67ulmblQ0Wdf+BGAKAfrhYNEfoDDIuboQChP8A4mB8KEPoDjIvpWQFCf4BxOVqsvirNzZZY6AMQCWsFQuzuAxCPskDIzlqB68uf74UuFABGw8ZaARJ/ANNgojZgfSFs7wUwAZMnBEn8Dc8fbj+6+PCvjy+++PuTi+9On17893+/X3z/79+Cr7WMrvtstbl23cu7Hzy+eOfOo+BroT+Tni1A4u8wln98dHH3z79cfPr5k8JQZDC7pNeFPsMicmC7VDmFv332a3FPegahz4B2TBYF0Pv3Y9vgu8hTFKDev4uqKMGTkzPFFPsI0vu3Qz3cvY8fF+H8vh6+jdSzhr7DEvt6/zbSM9Kz0udoOBT6DqixtsXSLOOI3n8/argy+q69fJPUs4a+zxJde/8m/fDj78WzxBk0EDMKoPd/kaqnH9ro67IcBRza+zcJZ7CHWFEAvf9zZPRq9GMb/bYs5wKG7v33Sc9Bz54k4hYxogB6/00iT0mrQ8f0fVVPlqlH1P+TQaiH1LV98+3TYiwtQ5FhVuy75u3X6X1Cn6HPUtZen63pPH1XvRceu/ffJd2Pro8E4pqxo4Cce/9YIX4byUCrGoGppbC8cjJTS9ciRxT6/XJh1LoAzTmGvjRlZPiatpuqt0fdJWf0xZdPs8wVjFYXcGPtWUJfmDJqQBZ6NtRP+u1yzBGMEgXkuOLvm2+flE0JedUXXz4J/raJM+xR4zmu+JsqqYWGV44JwkH3Czharm6FviRVCP3TUo5DgUE3EM1t6o/QPz3lNhTQrkGl+R6ma8c/Xw19QaponhulqdyGAoMkA3NL/hH6pyvVCYR+81Q5eEowt+Sf5vtR2rr3ya/B3z5FDt48NKfKPyX+UPpSQVdWCcFDthDPqfKPxF8+0tqBUBtIkd7DgJzCfyWHUF7KKSHYaxhwffkwm7l/En/5SQuYQm0hRXrVBOQS/lPxl69yWTnYeRiQU/hP75+vcqoQ7DQMyCX7z7Qf0kYnobaRHF1mA3II/6n3R1Iu04KthwEKFUIfkBr0/qhSDlFA66KgHGr/6f3RtnKJAlqtDcih9p/eH9WVQxQwW569X5r5bs0Wq9PQm1OB3h+FlEUU0LRrcA7Tf/T+aJdyiAL25gFyGP/T+6NdyiEK0BR/ae4vSmOE0JtSgao/1KTUo4C9eYDUx//0/qhJigJCbScVZOOluV9W6vP/9P6orVJfKRjMA6R+8IeFI72QD6W+UjBYD5Dy8l92+0FdlXQUEFoXsP7DyQsvTAR2+0FdpROWQ20pBWbHq49Ks3+ulBOAJP9QVyU9JRgqCAq+MAFI/qG+uvdxulOClxKBKScASf6hvko5GTibP75Smn+6FYAk/9ChUhsKtS3vXKoI1KaBoRd5597HhP/oMKVaGXipInD9P5KcASD5hw6V2lCobXnn0kxAijMAt++w1z8aRinWBFwqCT5arh6EXuQZzeMiNIRSrAl4dnx4qmsACP/RUEp1gVAxFTibn10J/dEzhP9oaCU5DNBUYIo1AGT/0dBKcTbg5vEvryV5CAjFP2hopVgUVNQCpFYD4LH45/t//VZELe9+8Li4fnH7zqPiv9Xz6O/epGtW8kz3oHup7kmhtO7V4z2ltjagODQ0tW3AvNT+K7Ek427bqGRAXztY1fj1t09bj5d1T3oGXhK2H/4lrcNEi2Kg68tVUucAeFj6q95PjT90/U3ofRYNRtfUN1HmybmFrt8rRTFQaucAWu9NhkomWXJ0cmhDhMd6NpaV2nRgcV5gSg7A+vTfUMZfYaHYST136Nr6Yt0JvHMnnTxA4QC0OUDojx6xPP4fq5psyhkPRVtjJMYsO4Gk9gjQxiApOYB/nD4tfyZbkqGErncINH5WaBpb+s6+eYw2WJ3KTSoPkJoDsDr+H7uKTL1SbA09nKmjKUOLGtOZR6dwAKE/OES9kUXF6jFiOr9YRmB1ZmDMyCc2yTgAFZxYVKwa8pjlz2P3/hV6dhaVUj1AMg7AYuIoZrioZFysXEDMHtBiLiCl5cHJOACLDSV2wijGM/jhx7g18RYd+3en6SQCk3EAU2TCm/TuB3GXkMaoC4jd+1kc2qVUEJSEA1D4a1Gxi0Zi1EHEnge3mtwdo/5hCpJwAFaTRbEbSYznECupuY1FxY7uxiIJB2B1A5DQtY5JjN4SB7BRKhWBSRQCWaiJDyl0rWMSYy0EDmCjJGYCUqkEtFo2muIQYIrQ16KSmAlIxQH88B+bJcCxk4AxMuaxQ1+rKzyTKAmWA0hhObBVxa4YYxowrkLX64kk9gOwOk0kxTaWGEOh2D2f1fyO5H1NwGY/AOdbgsUY9/ZVzIKRmI4wZsOPucipq7xvDlJsCeZ9U1DLIaIUK2seczOU3BcDVfK+KKjYFNT7tuDWDwFRWB667qGJ2VMqsokxw2F9g1fvtQCbbcGdHwxicbFIXWNHAfc+SW9DEMu5nUqxIqGxKA4GuXb889XQH73gYTtp9c5j9ZgylCkWQuk7x8wFWB77V/K+Pdgb84evuj8c1Oo+gHV9M1JjmdJQxnJsn35u36lL3h1AcTio9+PBrVYBhqSGHbqHvsipTK0ffhzWCXgxfknnIYTuwQvF8eDS0XL1IPQCD3hyANIQTkAGp1JUK5ITGGI44Mn4pdibowzJ0fL8QWH80myxOg29yAMexop16Zr7GowSihbvWdekqcjQNTehZ+HNkUu659D9eEA2X5r/S66LgTw6gEoK4ds6Ahm+h3MPdU9tZz0UyajXnyKJOYRcO4Dl+Wel+a8jAMfFQF4bz7bU+2lKSUVNMh45Bf1TPapKYRVie5OMQ9de3ZOq5vRP/XdxPLjDHr8u3w5gdbc0/7UDcFwLgNCUCrVJD9w8/uW10vzXDsDxVCBCUyrUJj1Q1ABU8jwViNCUCrVJD5Sm/1xeNwZBaEqF2qR1Ls0AVPI6E4DQlAq1SetcmgGodH358FboxdZBaEqF2qR5lqtbpdk/l5ICwRcbB6EpFWqT1rmUAKzkNRGI0JQKtUnrPFsDUJfHkmDPlYDItzwWAgUTgJU8VgTiANBUcukAtA3YLnmsCMQBoKnkcTXgpQrAujzmAaweCoLSl8f9AF6fP3qlNPewvBUEpbCoBPmUNwewd/xfyVsewMOegChNedsS7IbOAWiSt3oAHACaSrFPfjqUveP/SsoDeNoizOq24EpOau37d//0sWmpNWmfBxmY9g6wuueDt23Bd87/1+XpvECLB4Nov77tjTK1wYciFWYsmiVjl2HVn5/FZ+fpYJDiHMC28rQuIOaRWG3UNC7U9Sp5hJ5LRq9nsm8rMTkEazM+734Q59i3QViev1mad7O8TQdaGgaop9JJPaHr3Ea9mqKXnKMCGb2ewXZvH6LaO9CSvB0L1jj9V5e3Y8OthYm6lra75N6+86hwYjnUNLQ1elEZvqUcgPZn1O8Vul6rdAr/K3k8NFQNxtp58l0cgZAj0+uVPLSa/Ooi3YN2CtY9tTF6YdHwJbWttvdgitDy3yZ5rAqs0FjSWmjd1RFU6F7UY3pxCLpGXauuuWtPadXw9dvty09Yp3P4X8nbMGAbi9GApMbU5TyAOjIqTS/q3hROTzls0L3I2HUtuqa+9yTj0mdYdHDepvrq9Ar/K3ndJWgba7mBbWm6UIYTuu4uyNlVjkE9r4xJhikHoXvvY1h6j96rz5DD0mfqs/Ud+q5DQ2G9X59ntZRb993XoZmiS/a/Lm9FQfuQJ7fYw0gxexk16n2E3jMGVk91VhvpM1SzSu/wv5LnYUAdNXCLpcMxDc8KCvutSY740MjGEq1q/5vkda/AfcjgrAwLvJ8xfwhWwv9kwv0arWr/2yiVYUAdhXpTOgJ9d469f4XufUrJ8D1n9/eyOLtfmu/h8lgT0IWpHIG3arIxUHIxtpI2/Ip5j7n/XfJcE9CFmI5A3xO6htzQmDtWcjYLwy85OPlX1/pDT+pfkioxHEEuDbENioTGVE6GLwZJ/tWVYjKwibEcQc6Jv12MkRDMzfArggd/DKGUpgS7oOIXNaYhJIeSc+JvF3omQwwF9BnKK7zjbMHOUBxU+dekHKOAbdRID93YQ1FF6LPhsGXdKolObR6/F4dU/rWR12PEh0aG3DUqIPRvRstt26rq7cmnlAw59bdLs7m/w0PGRFGBGmFTVEDo3442QwE5Xq0jyL63rzN271+JKCCMeqJdQ4QhFv3kQmhWAKNvIEbvX4kooJltZxBzsU8qKKrC6DsQq/evRBQAYISYvX8logAAI8Tu/SvlWhcAYIYpev9KudcFAEzOVL1/JaIAgMk4Kc1wOs3mZ1cCFwYAIzP4ir++8nakOIB3Rlnx11cpbR4KYJ7F2X0zvX+lo/nK/RbiAC6YOvG3SyQEAUZmymm/Jt1YhyXBiwaAQTAX+teV+gaiAFMh2yrNzLZmi9Vp6AYAoCeWQ/+6qA0AGBbzoX9dDAUAhsFN6F8XQwGAA/EU+telWQEKhAD6IdtxF/rXRYEQQE+WAx7vNaVYKwDQDdlMaT7+VZwtuB7LhG4UAGoUtf4XL5fmk4bIBwA0k8S4f5fYRxCgAasLfYYS9QEAYdzO93fV+mazOWocoCXTb+8VSyQFAbZIMenXpGLpME4Acqcw/kSTfk3SoiFmBiBXks74txVnC0CuXJuvrpZmkLeYHoTcmB2fLcrmjySmByEXspnu6yqcAKQOxt8gnACkCsbfUjgBSA2Mv6NwApAKGH9P4QTAOxj/gcIJgFcw/oHEtmLgDeb5B9a1+c9XKRsG66iNqrq1bLZoSLGACEyzbpta31I2VzSGcAJgkpxX9cVWsZ8Am4qAHU6yW89vQcwQwNSQ6Z9YWklIchBiozZHpt+IyAtAVBjv25PyApxABGOjNsZ437BUNMSQAIamaFOpnNWXuhgSwJDMFuenhPwOxSwBHApZfuciGoA+qNenqi8hEQ1AW+j1ExXRAOzjaLH6irF+Biq2IccRQAkZ/gxVRAPL1b1Qg4B8YF4/cxWOgIVF2aFwnyQfeiaGBXkgw2fDDrRTOIJE0W+6PH+z/JkR2i8cQSJg+OgQ4QicguGjISVHoPFjsLGBGRjjo1GlxsX0oUlOMHwUTZs6goe3GB5MR7Erz3J1l3l8NKl0ZgFRQRxk9IT5yKQUFZArGAc905vz1dv09siF5AzUYHEG/cHoURIiMmhHFd5j9ChZqWErZzBbnr8/W6xOQ4aQFYuz+3oWGtNj9Cg7KTrIySHoHot7XUdEGDxCNcko1BsqDF4bzIlrp6De/Xj1ke6FHh6hAyQD2kQKxdZmhWMoNrIIGV5Eirl49eprQ6969jVXMHaEIkiGJoOTgyiMb+0gCkNcG6QSakXiUcVKFQEjvsTWa6v3PzNuffb6OwpHhJEnoJde+j9uYj9Uj7u+AQAAAABJRU5ErkJggg==
+      type: Discord
+      group: ''
+      score: 50
+      iconGlyph: ''
+      disabledMachineLearning: false
+      informationElements: []
+    position:
+      x: 1830
+      y: 1094
+    variables:
+    - name: myvar
+      value: result
+    children:
+    - id: 2
+      type: Custom operation
+      model:
+        name: Go to Discord
+        iconGlyph: 
+        keyGesture: None
+        selected: false
+        positionPriority: 1
+      position:
+        x: 2167
+        y: 1062
+      variables:
+      - name: myvar
+        value: result
+      children:
+      - id: 3
+        type: Hide search window
+        position:
+          x: 1985
+          y: 1281
+        variables:
+        - name: myvar
+          value: result
+        children:
+        - id: 4
+          type: Switch Process
+          model:
+            processName:
+              text: discord
+              textMatchType: Exact
+              matchCase: false
+            processTitleContains:
+              text: ''
+              textMatchType: Contains
+              matchCase: false
+            goToPrevious: false
+          position:
+            x: 1834
+            y: 1503
+          variables:
+          - name: process
+            value: result
+          children:
+          - id: 5
+            type: Delay
+            model:
+              delayInMS: 300
+            position:
+              x: 2241
+              y: 1306
+            variables:
+            - name: myvar
+              value: result
+            children:
+            - id: 6
+              type: Press keys combo
+              model:
+                hotkey:
+                  hotKeys:
+                  - LCTRL
+                  - T
+              position:
+                x: 2071
+                y: 1565
+              variables:
+              - name: myvar
+                value: result
+              children:
+              - id: 7
+                type: Delay
+                model:
+                  delayInMS: 25
+                position:
+                  x: 2305
+                  y: 1641
+                variables:
+                - name: myvar
+                  value: result
+                children:
+                - id: 8
+                  type: Type text
+                  model:
+                    text: '{searchText}'
+                  position:
+                    x: 1959
+                    y: 1763
+                  variables:
+                  - name: myvar
+                    value: result
+                  children:
+                  - id: 9
+                    type: Delay
+                    model:
+                      delayInMS: 25
+                    position:
+                      x: 2204
+                      y: 1869
+                    variables:
+                    - name: myvar
+                      value: result
+                    children:
+                    - id: 10
+                      type: Press keys combo
+                      model:
+                        hotkey:
+                          hotKeys:
+                          - Enter
+                      position:
+                        x: 2446
+                        y: 1862
+                      variables:
+                      - name: myvar
+                        value: result
+                      children: []
+                      comment: ''
+                    comment: ''
+                  comment: ''
+                comment: ''
+              comment: ''
+            comment: ''
+          comment: ''
+        comment: ''
+      comment: ''
+    comment: ''
+  comment: ''
+- id: 2
+  comment: ''
+name: Search Discord
+author: Adir
+iconGlyph: 
+description: None
+enable: true
