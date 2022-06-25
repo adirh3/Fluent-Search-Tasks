@@ -1,0 +1,112 @@
+zoom: 0.64234772716030175
+offsetX: 802.25827584094475
+offsetY: 252.66515185242895
+children:
+- id: 0
+  type: Search
+  model:
+    searchPrefix: define
+    searchedTagExact: ''
+    searchTagIcon:
+      value: 
+    searchedText:
+      text: ''
+      textMatchType: Contains
+      matchCase: false
+    searchType: SearchAll
+  position:
+    x: 587
+    y: 1587
+  variables:
+  - name: searchText
+    value: result.SearchedText
+  - name: searchTag
+    value: result.SearchedTag
+  children:
+  - id: 1
+    type: HTTP Action
+    model:
+      method: Get
+      uRI: https://api.dictionaryapi.dev/api/v2/entries/en/{searchText}
+      sendJsonBody: false
+      headers: []
+    position:
+      x: 789
+      y: 1674
+    variables:
+    - name: httpResult
+      value: JsonNode.Parse(result as string)[0]["meanings"][0]["definitions"][0]["definition"].ToString()
+    children:
+    - id: 2
+      type: Custom result
+      model:
+        name: '{httpResult[0].ToString().ToUpper() + httpResult.Substring(1)}'
+        previewImageProviderSetting:
+          value: 
+        type: Define
+        group: ''
+        score: 100
+        iconGlyph: 
+        disabledMachineLearning: false
+        informationElements: []
+      position:
+        x: 981
+        y: 1760
+      variables:
+      - name: myvar
+        value: result
+      children:
+      - id: 3
+        type: Custom operation
+        model:
+          name: Search in Google
+          iconGlyph: 
+          keyGesture: None
+          selected: false
+          positionPriority: 1
+        position:
+          x: 1181
+          y: 1847
+        variables:
+        - name: myvar
+          value: result
+        children:
+        - id: 4
+          type: Open URL
+          model:
+            url: https://www.google.com/search?q=define+{searchText}
+          position:
+            x: 1372
+            y: 1918
+          variables:
+          - name: myvar
+            value: result
+          children:
+          - id: 5
+            type: Hide search window
+            position:
+              x: 1578
+              y: 2021
+            variables:
+            - name: myvar
+              value: result
+            children: []
+            comment: ''
+          comment: Opens Google search URL by appending the {searchText} variable at the end
+        comment: A custom operation to trigger a search in Google
+      comment: Show a custom search result based JSON returned by the HTTP call
+    comment: >-
+      Call a dictionary API using HTTP Get
+
+      This will append the searched term to end the of URL using {searchText}
+  comment: >-
+    Trigger when searching "define " following by the word you want to look for.
+
+    For example, "define fluent"
+- id: 3
+  comment: ''
+name: Dictionary
+author: Adir
+iconGlyph: 
+description: None
+enable: true
