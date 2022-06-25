@@ -3,6 +3,8 @@ Shared Fluent Search Task Projects to boost your productivity!
 
 <img width="745" alt="image" src="https://user-images.githubusercontent.com/27368554/175789605-17419dba-2f1c-4438-ba7d-094026078dc1.png">
 
+Download Fluent Search - [Download](https://fluentsearch.net)
+
 ## What can you find here?
 
 You can find here Task projects shared by the community that can do various things.  
@@ -11,6 +13,10 @@ Each Task project has its own folder, with an explanation.
 ## How to import Tasks?
 
 To import a Task project, simply download the `.yaml` file and drag and drop it into Fluent Search Tasks window.
+
+## Contribution
+
+Feel free to open a pull request for adding new Task projects or refering to a different GitHub page in a `README.md` file.
 
 ## What are Tasks?
 
