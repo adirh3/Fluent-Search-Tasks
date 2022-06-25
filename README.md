@@ -1,5 +1,5 @@
 # Fluent-Search-Tasks
-Shared Fluent Search Task Projects to boost your productivity
+Shared Fluent Search Task Projects to boost your productivity!
 
 <img width="745" alt="image" src="https://user-images.githubusercontent.com/27368554/175789605-17419dba-2f1c-4438-ba7d-094026078dc1.png">
 
