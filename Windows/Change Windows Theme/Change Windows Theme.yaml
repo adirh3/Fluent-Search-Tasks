@@ -1,0 +1,121 @@
+zoom: 0.64039879247302256
+offsetX: 761.53380760541597
+offsetY: 382.08495220030153
+children:
+- id: 0
+  type: Search
+  model:
+    searchPrefix: ''
+    searchedTagExact: ''
+    searchTagIcon:
+      value: 
+    searchedText:
+      text: wt
+      textMatchType: Exact
+      matchCase: false
+    searchType: SearchAll
+  position:
+    x: 605
+    y: 1601
+  variables:
+  - name: searchText
+    value: result.SearchedText
+  - name: searchTag
+    value: result.SearchedTag
+  children:
+  - id: 1
+    type: Custom result
+    model:
+      name: Change Windows theme
+      previewImageProviderSetting:
+        value: 
+      type: System
+      group: ''
+      score: 100
+      iconGlyph: 
+      disabledMachineLearning: false
+      informationElements: []
+    position:
+      x: 891
+      y: 1696
+    variables:
+    - name: myvar
+      value: result
+    children:
+    - id: 2
+      type: Custom operation
+      model:
+        name: Dark
+        iconGlyph: 
+        keyGesture: Ctrl+D1
+        selected: false
+        positionPriority: 1
+      position:
+        x: 1221
+        y: 1488
+      variables:
+      - name: myvar
+        value: result
+      children:
+      - id: 3
+        type: PS Script
+        model:
+          powerShellExe: powershell.exe
+          stopOnError: true
+          runAsAdmin: false
+          showWindow: false
+          content: >-
+            Set-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize -Name AppsUseLightTheme -Value 0
+
+            Set-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize -Name SystemUsesLightTheme -Value 0
+        position:
+          x: 1529
+          y: 1529
+        variables:
+        - name: myvar
+          value: result
+        children: []
+        comment: Run a PowerShell script to change Windows theme to Dark
+      comment: Custom search operation to change the Windows theme to Dark
+    - id: 4
+      type: Custom operation
+      model:
+        name: Light
+        iconGlyph: 
+        keyGesture: Ctrl+D2
+        selected: false
+        positionPriority: 1
+      position:
+        x: 1227
+        y: 1836
+      variables:
+      - name: myvar
+        value: result
+      children:
+      - id: 5
+        type: PS Script
+        model:
+          powerShellExe: powershell.exe
+          stopOnError: true
+          runAsAdmin: false
+          showWindow: false
+          content: >-
+            Set-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize -Name AppsUseLightTheme -Value 1
+
+            Set-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize -Name SystemUsesLightTheme -Value 1
+        position:
+          x: 1530
+          y: 1755
+        variables:
+        - name: myvar
+          value: result
+        children: []
+        comment: Run a PowerShell script to change Windows theme to Light
+      comment: Custom search operation to change the Windows theme to Light
+    comment: Show a custom search result for theme change
+  comment: Trigger when searching "wt"
+name: Change Windows theme
+author: Adir
+iconGlyph: 
+description: None
+enable: true
