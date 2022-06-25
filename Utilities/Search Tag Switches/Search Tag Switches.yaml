@@ -1,0 +1,149 @@
+zoom: 0.63170150399999991
+offsetX: 731.00296809876636
+offsetY: 391.38164108641951
+children:
+- id: 0
+  type: Search
+  model:
+    searchPrefix: '?'
+    searchedTagExact: ''
+    searchTagIcon: &o0
+      value: 
+    searchedText:
+      text: ''
+      textMatchType: Exact
+      matchCase: false
+    searchType: SearchAll
+  position:
+    x: 840
+    y: 1275
+  variables:
+  - name: searchText
+    value: result.SearchedText
+  - name: searchTag
+    value: result.SearchedTag
+  children:
+  - id: 1
+    type: Show and search
+    model:
+      searchText: ''
+      searchTag: folder
+      searchType: SearchAll
+    position:
+      x: 1167
+      y: 1306
+    variables:
+    - name: myvar
+      value: result
+    children: []
+    comment: ''
+  comment: When typing "?" then space, search for folders
+- id: 2
+  type: Search
+  model:
+    searchPrefix: ??
+    searchedTagExact: ''
+    searchTagIcon: *o0
+    searchedText:
+      text: ''
+      textMatchType: Exact
+      matchCase: false
+    searchType: SearchAll
+  position:
+    x: 826
+    y: 1515
+  variables:
+  - name: searchText
+    value: result.SearchedText
+  - name: searchTag
+    value: result.SearchedTag
+  children:
+  - id: 3
+    type: Show and search
+    model:
+      searchText: ''
+      searchTag: web
+      searchType: SearchAll
+    position:
+      x: 1188
+      y: 1519
+    variables:
+    - name: myvar
+      value: result
+    children: []
+    comment: ''
+  comment: When typing "??" then space, search in the web
+- id: 4
+  type: Search
+  model:
+    searchPrefix: .
+    searchedTagExact: ''
+    searchTagIcon: *o0
+    searchedText:
+      text: ''
+      textMatchType: Exact
+      matchCase: false
+    searchType: SearchAll
+  position:
+    x: 820
+    y: 1725
+  variables:
+  - name: searchText
+    value: result.SearchedText
+  - name: searchTag
+    value: result.SearchedTag
+  children:
+  - id: 5
+    type: Show and search
+    model:
+      searchText: ''
+      searchTag: apps
+      searchType: SearchAll
+    position:
+      x: 1181
+      y: 1731
+    variables:
+    - name: myvar
+      value: result
+    children: []
+    comment: ''
+  comment: When typing "." then space, search for apps
+- id: 6
+  type: Search
+  model:
+    searchPrefix: $
+    searchedTagExact: ''
+    searchTagIcon: *o0
+    searchedText:
+      text: ''
+      textMatchType: Exact
+      matchCase: false
+    searchType: SearchAll
+  position:
+    x: 831
+    y: 1947
+  variables:
+  - name: searchText
+    value: result.SearchedText
+  - name: searchTag
+    value: result.SearchedTag
+  children:
+  - id: 7
+    type: Show and search
+    model:
+      searchText: ''
+      searchTag: settings
+      searchType: SearchAll
+    position:
+      x: 1184
+      y: 1964
+    variables:
+    - name: myvar
+      value: result
+    children: []
+    comment: ''
+  comment: When typing "$" then space, search for settings
+name: PT switches
+iconGlyph: 
+description: None
+enable: true
