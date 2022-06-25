@@ -1,0 +1,111 @@
+zoom: 0.75804180479999983
+offsetX: 602.88504320000038
+offsetY: 216.1553767111107
+children:
+- id: 0
+  type: Search
+  model:
+    searchPrefix: ''
+    searchedTagExact: ''
+    searchTagIcon:
+      value: 
+    searchedText:
+      text: '{*}'
+      textMatchType: Wildcard
+      matchCase: false
+    searchType: SearchAll
+  position:
+    x: 801
+    y: 1325
+  variables:
+  - name: searchText
+    value: result.SearchedText
+  - name: searchTag
+    value: result.SearchedTag
+  children:
+  - id: 1
+    type: C# Script
+    model:
+      content: return {searchText.Substring(1, searchText.Length - 2)};
+    position:
+      x: 1100
+      y: 1412
+    variables:
+    - name: scriptResult
+      value: result
+    children:
+    - id: 2
+      type: Custom result
+      model:
+        name: '{scriptResult}'
+        previewImageProviderSetting: &o0
+          value: 
+        type: C#
+        group: ''
+        score: 100
+        iconGlyph: 
+        disabledMachineLearning: false
+        informationElements: []
+      position:
+        x: 1382
+        y: 1622
+      variables:
+      - name: myvar
+        value: result
+      children: []
+      comment: A custom result that shows the evaluated expression
+    comment: >-
+      Run a custom C# script based on the {searchText} variable.
+
+      Using this you can run basic C# one-line expressions.
+
+      For example - {DateTime.UtcNow}
+  comment: >-
+    Triggers when searching anything inside {}.
+
+    For example - {DateTime.Now}
+- id: 3
+  type: Search
+  model:
+    searchPrefix: ''
+    searchedTagExact: csharp
+    searchTagIcon: *o0
+    searchedText:
+      text: ''
+      textMatchType: Contains
+      matchCase: false
+    searchType: SearchAll
+  position:
+    x: 797
+    y: 1666
+  variables:
+  - name: searchText
+    value: result.SearchedText
+  - name: searchTag
+    value: result.SearchedTag
+  children:
+  - id: 4
+    type: C# Script
+    model:
+      content: return {searchText};
+    position:
+      x: 1088
+      y: 1764
+    variables:
+    - name: scriptResult
+      value: result
+    children:
+    - id: 2
+      comment: ''
+    comment: >-
+      Run a custom C# script based on the {searchText} variable.
+
+      Using this you can run basic C# one-line expressions.
+
+      For example - {DateTime.UtcNow}
+  comment: Trigger when searching using the "csharp" search tag.
+name: C# City
+author: Adir
+iconGlyph: 
+description: None
+enable: true
