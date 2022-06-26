@@ -2,7 +2,7 @@
 
 Type e.g. `12 USD in EUR` to calculate and copy the EUR value into the clipboard.
 
-<img width="591" alt="image" src="https://user-images.githubusercontent.com/27368554/175790821-c640a6e6-01b2-490b-b353-8caebbd1dbce.png">
+<img width="591" alt="image" src="https://user-images.githubusercontent.com/1320525/175809476-2bd7a47a-5c2a-40cd-965f-8168f2055746.png">
 
 This is using the following API - `https://api.exchangerate.host`
 
