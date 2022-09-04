@@ -6,11 +6,11 @@ children:
   type: Search
   model:
     searchPrefix: ''
-    searchedTagExact: random
+    searchedTagExact: ''
     searchTagIcon: &o0
       value: 
     searchedText:
-      text: ''
+      text: random
       textMatchType: Exact
       matchCase: false
     searchType: SearchAll
