@@ -1,0 +1,455 @@
+children:
+- id: 0
+  type: Search
+  model:
+    searchPrefix: fs
+    searchedText:
+      text: a
+      textMatchType: Exact
+      matchCase: false
+    searchedTag:
+      text: ''
+      textMatchType: Exact
+      matchCase: false
+    searchType: SearchAll
+  position:
+    x: 242
+    y: 257
+  variables:
+  - name: searchText
+    value: result.SearchedText
+  - name: searchTag
+    value: result.SearchedTag
+  children:
+  - id: 1
+    type: Custom result
+    model:
+      name: Select FS Window to open
+      iconGlyph: 
+      type: fsLauncher
+      group: fsLauncher
+      score: 50
+    position:
+      x: 517
+      y: 231
+    variables:
+    - name: myvar
+      value: result
+    children:
+    - id: 2
+      type: Custom operation
+      model:
+        name: Open Tasks
+        iconGlyph: 
+        keyGesture: None
+      position:
+        x: 1040
+        y: 145
+      variables:
+      - name: myvar
+        value: result
+      children:
+      - id: 3
+        type: Show window
+        model:
+          window: Tasks
+        position:
+          x: 1288
+          y: 163
+        variables:
+        - name: myvar
+          value: result
+        children: []
+    - id: 4
+      type: Custom operation
+      model:
+        name: Open Settings
+        iconGlyph: 
+        keyGesture: None
+      position:
+        x: 1052
+        y: 338
+      variables:
+      - name: myvar
+        value: result
+      children:
+      - id: 5
+        type: Show window
+        model:
+          window: Settings
+        position:
+          x: 1303
+          y: 354
+        variables:
+        - name: myvar
+          value: result
+        children: []
+    - id: 6
+      type: Custom operation
+      model:
+        name: Open Plugins
+        iconGlyph: 
+        keyGesture: None
+      position:
+        x: 1052
+        y: 494
+      variables:
+      - name: myvar
+        value: result
+      children:
+      - id: 7
+        type: Show window
+        model:
+          window: Plugins
+        position:
+          x: 1304
+          y: 507
+        variables:
+        - name: myvar
+          value: result
+        children: []
+    - id: 8
+      type: Custom operation
+      model:
+        name: Open About
+        iconGlyph: 
+        keyGesture: None
+      position:
+        x: 1068
+        y: 661
+      variables:
+      - name: myvar
+        value: result
+      children:
+      - id: 9
+        type: Show window
+        model:
+          window: About
+        position:
+          x: 1306
+          y: 677
+        variables:
+        - name: myvar
+          value: result
+        children: []
+    - id: 10
+      type: Custom operation
+      model:
+        name: Open Tasks Folder
+        iconGlyph: 
+        keyGesture: None
+      position:
+        x: 1048
+        y: 996
+      variables:
+      - name: myvar
+        value: result
+      children:
+      - id: 11
+        type: PS Script
+        model:
+          content: 'Invoke-Item "$env:APPDATA\Blast\Tasks" '
+          showWindow: false
+        position:
+          x: 1276
+          y: 1023
+        variables:
+        - name: myvar
+          value: result
+        children: []
+    - id: 12
+      type: Custom operation
+      model:
+        name: Backup Tasks Folder
+        iconGlyph: 
+        keyGesture: None
+      position:
+        x: 1066
+        y: 1144
+      variables: []
+      children:
+      - id: 13
+        type: PS Script
+        model:
+          content: >+
+            Add-Type -AssemblyName System.Windows.Forms
+
+            $source = "$env:APPDATA\Blast\Tasks"
+
+            $target = "C:\myScripts\FluentSearch_Tasks\" + $(get-date -f yyyy-MM-dd-HHmmss) + "_fsTasksBackup.zip"
+
+            #[System.Windows.Forms.MessageBox]::Show("$source","source",0)
+
+            #[System.Windows.Forms.MessageBox]::Show("$target","target",0)
+
+            $compress = @{
+
+              Path = $source
+
+              CompressionLevel = "Fastest"
+
+              DestinationPath = $target}
+
+            Compress-Archive @compress
+
+
+
+
+          showWindow: true
+        position:
+          x: 1304
+          y: 1198
+        variables:
+        - name: myvar
+          value: result
+        children: []
+- &o0
+  id: 2
+- &o5
+  id: 4
+- id: 14
+  type: Condition
+  model:
+    continueIfTrue: true
+  position:
+    x: 677
+    y: -159
+  variables:
+  - name: myvar
+    value: result
+  children: []
+- &o3
+  id: 6
+- &o4
+  id: 8
+- id: 15
+  type: Search
+  model:
+    searchPrefix: fs
+    searchedText:
+      text: t
+      textMatchType: Exact
+      matchCase: false
+    searchedTag:
+      text: ''
+      textMatchType: Exact
+      matchCase: false
+    searchType: SearchAll
+  position:
+    x: 256
+    y: 395
+  variables:
+  - &o1
+    name: searchText
+    value: result.SearchedText
+  - &o2
+    name: searchTag
+    value: result.SearchedTag
+  children:
+  - id: 16
+    type: Custom result
+    model:
+      name: Open FS Tasks Editor
+      iconGlyph: 
+      type: fsLauncher
+      group: fsLauncher
+      score: 50
+    position:
+      x: 528
+      y: 401
+    variables:
+    - name: myvar
+      value: result
+    children:
+    - *o0
+- id: 17
+  type: Search
+  model:
+    searchPrefix: fs
+    searchedText:
+      text: p
+      textMatchType: Exact
+      matchCase: false
+    searchedTag:
+      text: ''
+      textMatchType: Exact
+      matchCase: false
+    searchType: SearchAll
+  position:
+    x: 264
+    y: 555
+  variables:
+  - *o1
+  - *o2
+  children:
+  - id: 18
+    type: Custom result
+    model:
+      name: Open FS Plugins
+      iconGlyph: 
+      type: fsLauncher
+      group: fsLauncher
+      score: 50
+    position:
+      x: 534
+      y: 563
+    variables:
+    - name: myvar
+      value: result
+    children:
+    - *o3
+- id: 19
+  type: Search
+  model:
+    searchPrefix: fs
+    searchedText:
+      text: ab
+      textMatchType: Exact
+      matchCase: false
+    searchedTag:
+      text: ''
+      textMatchType: Exact
+      matchCase: false
+    searchType: SearchAll
+  position:
+    x: 271
+    y: 712
+  variables:
+  - *o1
+  - *o2
+  children:
+  - id: 20
+    type: Custom result
+    model:
+      name: Open FS About Dialog
+      iconGlyph: 
+      type: fsLauncher
+      group: fsLauncher
+      score: 50
+    position:
+      x: 538
+      y: 716
+    variables:
+    - name: myvar
+      value: result
+    children:
+    - *o4
+- id: 21
+  type: Search
+  model:
+    searchPrefix: fs
+    searchedText:
+      text: s
+      textMatchType: Exact
+      matchCase: false
+    searchedTag:
+      text: ''
+      textMatchType: Exact
+      matchCase: false
+    searchType: SearchAll
+  position:
+    x: 305
+    y: 852
+  variables:
+  - *o1
+  - *o2
+  children:
+  - id: 22
+    type: Custom result
+    model:
+      name: Open FS Settings
+      iconGlyph: 
+      type: fsLauncher
+      group: fsLauncher
+      score: 50
+    position:
+      x: 573
+      y: 868
+    variables:
+    - name: myvar
+      value: result
+    children:
+    - *o5
+- id: 23
+  type: Search
+  model:
+    searchPrefix: fs
+    searchedText:
+      text: tdir
+      textMatchType: Exact
+      matchCase: false
+    searchedTag:
+      text: ''
+      textMatchType: Exact
+      matchCase: false
+    searchType: SearchAll
+  position:
+    x: 294
+    y: 1014
+  variables:
+  - *o1
+  - *o2
+  children:
+  - id: 24
+    type: Custom result
+    model:
+      name: Open FS Tasks Folder
+      iconGlyph: 
+      type: fsLauncher
+      group: fsLauncher
+      score: 50
+    position:
+      x: 556
+      y: 1032
+    variables:
+    - name: myvar
+      value: result
+    children:
+    - &o6
+      id: 10
+    - &o7
+      id: 12
+- *o6
+- id: 25
+  type: Search
+  model:
+    searchPrefix: fs
+    searchedText:
+      text: b
+      textMatchType: Exact
+      matchCase: false
+    searchedTag:
+      text: ''
+      textMatchType: Exact
+      matchCase: false
+    searchType: SearchAll
+  position:
+    x: 293
+    y: 1172
+  variables:
+  - name: searchText
+    value: result.SearchedText
+  - name: searchTag
+    value: result.SearchedTag
+  children:
+  - id: 26
+    type: Custom result
+    model:
+      name: Backup FS Tasks Folder
+      iconGlyph: 
+      type: fsLauncher
+      group: fsLauncher
+      score: 50
+    position:
+      x: 565
+      y: 1185
+    variables:
+    - name: myvar
+      value: result
+    children:
+    - *o7
+- *o7
+name: FSlauncher
+author: ironboy
+iconGlyph: 
+enable: true
