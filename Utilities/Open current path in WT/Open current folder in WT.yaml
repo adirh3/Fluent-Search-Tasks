@@ -1,0 +1,57 @@
+zoom: 0
+offsetX: 0
+offsetY: 0
+children:
+- id: 0
+  type: Hotkey
+  model:
+    hotkey:
+      name: Hotkey Task trigger
+      hotKeys:
+      - LCTRL
+      - LMENU
+      - A
+  position:
+    x: 695
+    y: 1467
+  variables:
+  - name: myvar
+    value: result
+  children:
+  - id: 1
+    type: Get context
+    model: {}
+    position:
+      x: 1012
+      y: 1474
+    variables:
+    - name: path
+      value: result
+    children:
+    - id: 2
+      type: Open
+      model:
+        fileName: wt.exe
+        runAsAdmin: false
+        arguments: -d "{path}"
+      position:
+        x: 1329
+        y: 1568
+      variables:
+      - name: myvar
+        value: result
+      children: []
+      comment: ''
+    comment: ''
+  comment: ''
+name: Open current folder in WT
+author: Adir
+iconGlyph: 
+icon:
+  value: 
+description: Open current folder from Explorer in Windows Terminal
+enable: true
+taskProjectSettings:
+  id: 64638890-68fb-46cb-b312-8d43d8d66cb5
+  showSettingPage: false
+  projectSettings: []
