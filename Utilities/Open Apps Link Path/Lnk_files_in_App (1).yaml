@@ -1,0 +1,75 @@
+zoom: 0.7770803783706477
+offsetX: 416.01039724360095
+offsetY: -251.571875852684
+children:
+- id: 0
+  type: Result selector
+  model:
+    name:
+      text: ''
+      textMatchType: Contains
+      matchCase: false
+    type:
+      text: App
+      textMatchType: Contains
+      matchCase: false
+    searchApp:
+      text: ''
+      textMatchType: Contains
+      matchCase: false
+    context:
+      text: ''
+      textMatchType: Contains
+      matchCase: false
+  position:
+    x: 1028
+    y: 2056
+  variables:
+  - name: searchResult
+    value: result
+  children:
+  - id: 1
+    type: Custom operation
+    model:
+      name: Open Link File Folder
+      iconGlyph: 
+      keyGesture: Ctrl+D4
+      selected: false
+      positionPriority: 50
+    position:
+      x: 1224
+      y: 2317
+    variables:
+    - name: myvar
+      value: result
+    children:
+    - id: 2
+      type: Open Parent Folder
+      model:
+        value: '{searchResult.ApplicationInfo?.LinkPath}'
+        requireConfirmation: false
+        triggerAnywhere: false
+        keyGesture: None
+      position:
+        x: 1551
+        y: 2106
+      variables:
+      - name: myvar
+        value: result
+      children:
+      - id: 3
+        type: Hide search window
+        position:
+          x: 1678
+          y: 2352
+        variables:
+        - name: myvar
+          value: result
+        children: []
+- id: 2
+- id: 1
+name: Lnk files in App
+author: Adir
+iconGlyph: 
+description: None
+enable: true
