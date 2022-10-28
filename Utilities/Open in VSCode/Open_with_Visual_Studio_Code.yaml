@@ -1,0 +1,90 @@
+zoom: 0.59999999999999998
+offsetX: 1186
+offsetY: 1176.8
+children:
+- id: 0
+  type: Custom operation
+  model:
+    name: Open with Visual Studio Code
+    iconGlyph: 
+    keyGesture: Alt+C
+    selected: false
+    positionPriority: 1
+  position:
+    x: 289
+    y: 327
+  variables: []
+  children:
+  - id: 1
+    type: PS Script
+    model:
+      runAsAdmin: false
+      showWindow: false
+      content: code "$FilePath"
+    position:
+      x: 541
+      y: 318
+    variables:
+    - name: myvar
+      value: result
+    children: []
+- id: 2
+  type: Result selector
+  model:
+    name:
+      text: ''
+      textMatchType: Contains
+      matchCase: false
+    type:
+      text: File
+      textMatchType: Exact
+      matchCase: false
+    searchApp:
+      text: ''
+      textMatchType: Contains
+      matchCase: false
+    context:
+      text: ''
+      textMatchType: Contains
+      matchCase: false
+  position:
+    x: 26
+    y: 235
+  variables:
+  - name: FilePath
+    value: result.Context
+  children:
+  - &o0
+    id: 0
+- id: 3
+  type: Result selector
+  model:
+    name:
+      text: ''
+      textMatchType: Contains
+      matchCase: false
+    type:
+      text: Folder
+      textMatchType: Exact
+      matchCase: false
+    searchApp:
+      text: ''
+      textMatchType: Contains
+      matchCase: false
+    context:
+      text: ''
+      textMatchType: Contains
+      matchCase: false
+  position:
+    x: 28
+    y: 435
+  variables:
+  - name: FilePath
+    value: result.Context
+  children:
+  - *o0
+name: Open with Visual Studio Code
+author: yobyths
+iconGlyph: 
+description: Adds an operation to open a File or Folder search result with Visual Studio Code
+enable: true
