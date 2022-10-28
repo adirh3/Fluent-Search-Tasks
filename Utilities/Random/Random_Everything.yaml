@@ -1,0 +1,241 @@
+zoom: 0.49387521156396175
+offsetX: 967.21900822061832
+offsetY: 582.94218449674179
+children:
+- id: 0
+  type: Search
+  model:
+    searchPrefix: ''
+    searchedTagExact: ''
+    searchTagIcon: &o0
+      value: 
+    searchedText:
+      text: random
+      textMatchType: Exact
+      matchCase: false
+    searchType: SearchAll
+  position:
+    x: 515
+    y: 1760
+  variables:
+  - name: searchText
+    value: result.SearchedText
+  - name: searchTag
+    value: result.SearchedTag
+  children:
+  - id: 1
+    type: Custom result
+    model:
+      name: Choose Random Type
+      previewImageProviderSetting: *o0
+      type: Random
+      group: ''
+      score: 100
+      iconGlyph: 
+      disabledMachineLearning: false
+      informationElements: []
+    position:
+      x: 726
+      y: 1755
+    variables:
+    - name: myvar
+      value: result
+    children:
+    - id: 2
+      type: Custom operation
+      model:
+        name: Name
+        iconGlyph: 
+        keyGesture: None
+        selected: false
+        positionPriority: 1
+      position:
+        x: 1013
+        y: 1331
+      variables:
+      - name: myvar
+        value: result
+      children:
+      - id: 3
+        type: PS Script
+        model:
+          powerShellExe: powershell.exe
+          stopOnError: true
+          runAsAdmin: false
+          showWindow: false
+          content: Write-Output "Liam", "Noah", "Oliver", "Elijah", "William", "James", "Benjamin", "Lucas", "Henry", "Alexander", "Mason", "Michael", "Ethan", "Daniel", "Jacob", "Logan", "Jackson", "Levi", "Sebastian", "Mateo", "Jack", "Owen", "Theodore", "Aiden", "Samuel", "Joseph", "John", "David", "Wyatt", "Matthew", "Luke", "Asher", "Carter", "Julian", "Grayson", "Leo", "Jayden", "Gabriel", "Isaac", "Lincoln", "Anthony", "Hudson", "Dylan", "Ezra", "Thomas", "Charles", "Christopher", "Jaxon", "Maverick", "Josiah", "Isaiah", "Andrew", "Elias", "Joshua", "Nathan", "Caleb", "Ryan", "Adrian", "Miles", "Eli", "Nolan", "Christian", "Aaron", "Cameron", "Ezekiel", "Colton", "Luca", "Landon", "Hunter", "Jonathan", "Santiago", "Axel", "Easton", "Cooper", "Jeremiah", "Angel", "Roman", "Connor", "Jameson", "Robert", "Greyson", "Jordan", "Ian", "Carson", "Jaxson", "Leonardo", "Nicholas", "Dominic", "Austin", "Everett", "Brooks", "Xavier", "Kai", "Jose", "Parker", "Adam", "Jace", "Wesley", "Kayden", "Silas" | Get-Random | clip
+        position:
+          x: 1255
+          y: 1343
+        variables:
+        - name: myvar
+          value: result
+        children:
+        - id: 4
+          type: Hide search window
+          position:
+            x: 1481
+            y: 1793
+          variables:
+          - name: myvar
+            value: result
+          children: []
+          comment: ''
+        comment: ''
+      comment: ''
+    - id: 5
+      type: Custom operation
+      model:
+        name: Email
+        iconGlyph: 
+        keyGesture: None
+        selected: false
+        positionPriority: 2
+      position:
+        x: 1016
+        y: 1548
+      variables:
+      - name: myvar
+        value: result
+      children:
+      - id: 6
+        type: PS Script
+        model:
+          powerShellExe: powershell.exe
+          stopOnError: true
+          runAsAdmin: false
+          showWindow: false
+          content: "function Get-RandomCharacters($length, $characters) {\r\n    $random = 1..$length | ForEach-Object { Get-Random -Maximum $characters.length }\r\n    $private:ofs=\"\"\r\n    return [String]$characters[$random]\r\n}\r\n \r\nfunction Scramble-String([string]$inputString){     \r\n    $characterArray = $inputString.ToCharArray()   \r\n    $scrambledStringArray = $characterArray | Get-Random -Count $characterArray.Length     \r\n    $outputString = -join $scrambledStringArray\r\n    return $outputString \r\n}\r\n\r\nfunction Get-EmailClient(){\r\n    return \"@gmail.com\", \"@yahoo.com\", \"@icloud.com\", \"@outlook.com\", \"@yandex.com\" | Get-Random\r\n}\r\n \r\n\r\n$rn = Get-Random -Minimum 2 -Maximum 5\r\n$email = Get-RandomCharacters -length $rn -characters 'abcdefghiklmnoprstuvwxyz'\r\n$email += Get-RandomCharacters -length $rn -characters 'ABCDEFGHKLMNOPRSTUVWXYZ'\r\n$email += Get-RandomCharacters -length $rn -characters '1234567890'\r\n$email += Get-EmailClient\r\n \r\nWrite-Output $email | clip"
+        position:
+          x: 1240
+          y: 1564
+        variables:
+        - name: myvar
+          value: result
+        children:
+        - &o1
+          id: 4
+          comment: ''
+        comment: ''
+      comment: ''
+    - id: 7
+      type: Custom operation
+      model:
+        name: Text
+        iconGlyph: 
+        keyGesture: None
+        selected: false
+        positionPriority: 4
+      position:
+        x: 1004
+        y: 2025
+      variables:
+      - name: myvar
+        value: result
+      children:
+      - id: 8
+        type: PS Script
+        model:
+          powerShellExe: powershell.exe
+          stopOnError: true
+          runAsAdmin: false
+          showWindow: false
+          content: "Write-Output \"Spider-Man: No Way Home is a phenomenal conclusion to the trilogy and Holland's best outing as Spidey yet. Starts off fun, safe and familiar and then becomes extremely emotional, satisfying and full of great callbacks. A love letter to all things Spider-Man. Tom Holland gives an incredible lead performance once again but with a lot more emotional heft this time around. Zendaya and Jacob Batalon both have perfect chemistry with Holland and are also incredible in their own ways. Benedict Cumberbatch reaffirms why he's such a good Doctor Strange with his excellent dry wit and gravitas. All the returning villains give strong performances but Willem Dafoe is definitely the standout performance with an unsettling and terrifying presence. Jon Watts' direction is superb, the action sequences are thrillingly acrobatic once again, there's a few homages to the styles of the previous iterations and some gorgeous images. It's also perfectly paced with none of its roughly 2hr 30 minute runtime feeling dull or overly long. The CG is extremely impressive with next to no weak spots. The music by Michael Giacchino is fantastic, a nice balance of themes from the previous ones and use of Holland's iconic motifs which are slightly altered in ways that work.\", \"I have been absolutely fizzing to see 'The Batman' from the day it was announced, but even more so from when I first heard it described as being inspired by 'Se7en' - one of my favourite psychological thrillers of all time. Were we finally going to get the raw and gritty Batman film I'd always dreamed of seeing? We certainly were. Where to begin? The biggest thing that struck me with this film was just how much time we got to spend with Batman, as Batman. There is very little of Bruce Wayne in this movie and I'm absolutely fine with that. The movie is Batman's story and we are with him from start to finish. We even get some narration from him, which I'm not quite sure how I feel about just yet. It was very good narration but I'm not sure he's a character I want it from. The Riddler in this movie is phenomenal. After The Joker in 'The Dark Knight' this is absolutely my second favourite Batman film villain. He was clearly inspired by the Zodiac killer and what an inspired choice. Also the use of the riddles in the film is nothing short of genius. These are very clever riddles and puzzles and make Batman have to do some serious detective work - something I've always wanted more of from him in the previous films. This is my favourite incarnation of Catwoman to date. I haven't loved her character's place in the films in the past. I've found she slows everything down and brings out a dull side of Batman that I haven't enjoyed. In this film though she was used perfectly. She's the love interest and a villain/anti-hero all in one. That is massive because it saves another thing that can often bog down a Batman film - the pointless love interest. The Penguin was probably the one letdown for me. From what I'd seen in the trailer I suspected this may be the case. I'm wondering if they were using this movie as a set-up for him and then in the second film he will evolve and have a lot more to do. In this one though I just found him quite a dull screen-presence. Robert Pattinson as Batman blew me away. He looked great and his voice was perfect. He was extremely intense and very menacing. Even though I knew he was more than capable of playing the role, I think I still needed to see the end product just for confirmation that he had what it takes. He absolutely did and then some. The film has quite a unique feel. There are scenes and sequences in this film that would feel out of place in both Tim Burton's Batman universe and Christopher Nolan's universe. But then there are little aspects from each of their respective films which clearly inspired parts of 'The Batman'. It basically took the best things from each of them and then twisted them into it's own style - while obviously adding a lot of its own stuff also. It's very well done in that sense. The Batmobile in this movie is awesome. There's just no other way to put it. The sound it made and the vibrations it sent through my cinema chair were bone-chilling. The chase sequence in this movie with The Penguin is one of the best I've ever seen. The film is long at just under 3 hours but it really never feels like it. There's a short period in the middle of the movie where everything slows down for a little while. That really is the only flat part of the movie however. The rest happens at a break-neck pace. It's hard to find enough good things to say about this movie. I need to see it again and digest a couple of things for a little longer, but for now I have it firmly sitting in second place behind 'The Dark Knight' in my order of favourite Batman films.\", \"You only get to watch this for the first time once, so choose your state of mind carefully. It is a film about movies and dreams and reality, and what sort of life it is best to find when you leave the cinema and return to whatever you left to enter. It is spectacular, and brutal, and enigmatic and disturbing. It is beautiful and absorbing. It is about one of my favourite characters ever to grace the screen. I don't see it often, in case it's not as good as I like to remember it. That is my secret, that I lock away in my safe in the basement. That somewhere there is a perfect world for us all. For some, perhaps it is in the cinema watching this.\", \"First of all, let me get it out of the way: yes, Avatar is visually stunning. With better scenario and dialogs, it could have been a very good movie; alas, it was completely predictable, and fancy special effects alone do not make a good movie. Let's start with the picture. As I said before, the special effects and computer animation are really good; the textures feel very real, and the degrees of liberty that CGI animation allows in terms of camera angles and movement is well used for dramatic effects. The luxurious vegetation of the forest and the CGI-animated wild animals are a treat to the eyes. In terms of artwork, there is a definite influence from Nausicaa (the forest-world, the spores) and Starcraft (the vessels, the goliaths). I saw the movie in an IMAX movie with 3D glasses, but I am not convinced that they used the full potential of it - quite honestly, the Haribo commercial before the movie made a better use of it. I find it more strenuous to watch a movie with the 3D-glasses - some details are blurry, and it feels likewise when the camera makes swift lateral movements. Now, the scenario - the movie disappoints in that area. The plot is very Manichean, and it feels like a remake of Pocahontas, interspersed with elements from / tributes to Star Wars (Pandora and the Na'vi look like Endor and the Ewoks respectively), Nausicaa (the forest as an entity, the destructive impact of civilization on nature, the spores in the forest), Starcraft (Colonel Quarritch and Dr Augustine bear some resemblance with Arcturus Mensk and Sarah Kerrigan), Matrix (the concept of controlling another image of self), and maybe even Independence Day (the pilot fighter suicide) and the Lion King (the father's death, 'go, and never come back!', ... am I going to far here?). But I can honestly say that I haven't been surprised at any point in the movie. You know from the beginning that he will be accepted by the Na'vi, that he will fall in love, that he will defect, that he will ultimately prevail after suffering some heavy casualties, and that he will find a way to permanently transfer his mind into the body of his avatar. It would have been interesting if the movie had dealt in more depth with the issues related to transferring one's mind into another body for instance, maybe a la Twelve Monkeys Army, where the 'hero' is clearly deeply affected by experiences that the mind is not used to deal with (time travel in that case, but it is not that different from what we have here). Likewise, the love interest of our hero seems very indifferent to the fact that he really is a human remotely controlling a human - Na'vi bastard. I was expecting someone (him, her, or even one of the other humans in the scientific group) to show at least some kind of surprise / doubt when these feelings emerge. I was expecting more complexity in the social interactions of the characters, and their personality. I also take issues with some big stereotypes: corporations and the white men are greedy, indigenous people are pure, brave, and connected to the earth, but dumb - thankfully there is a human to teach them how to fight those who come from the sky. To some extent, the movie feels like a remake of the colonization of the Americas; just replace the Na'vis by native Americans, the aircrafts by ships, and modern weapons by muskets, and you have it. Except of course the colonization of the Americas did not have such a happy ending for the native tribes. On the whole, the movie is beautiful, but it feels like the main goal was to showcase fancy special effects. The movie would have benefited from more detailed characters, and a less linear and predictable plot.\", \"The Matrix - 1999. This was a real change in filmmaking. Like watching it again in 2020, i.e. after 21 years and it still feels fresh. Iconic scenes are still having benchmarks setting up. If we say it sci-fi at its best, it won't be wrong. The hype was real, it is still not easy to match the level of Matrix where we experience the connection of humans and science, that too with amazing action fight and chase scenes, not just normal scenes they were, multiple exposures, slow motion 3D moves, Oh My God, and it's understandable as well like what are the characters up to and what storyline they are entering into. The script was very well written and executed otherwise it could have been a mess. A special appreciation in managing the theme with those black color costumes and a scientific zone with unimaginable equipment and props doing unbelievable things in the two worlds created. No spoilers, but the action scenes in the climax where the protagonist goes to save someone from agents are really breathtaking. The technology used at its best. A salute to Wachowski Brothers and the team for creating this masterpiece. It will be a great competition and motivation as well for many films coming in the future.\" | Get-Random | clip"
+        position:
+          x: 1226
+          y: 2016
+        variables:
+        - name: myvar
+          value: result
+        children:
+        - *o1
+        comment: ''
+      comment: ''
+    - id: 9
+      type: Custom operation
+      model:
+        name: Password
+        iconGlyph: 
+        keyGesture: None
+        selected: false
+        positionPriority: 3
+      position:
+        x: 1017
+        y: 1766
+      variables:
+      - name: myvar
+        value: result
+      children:
+      - id: 10
+        type: PS Script
+        model:
+          powerShellExe: powershell.exe
+          stopOnError: true
+          runAsAdmin: false
+          showWindow: false
+          content: "function Get-RandomCharacters($length, $characters) {\r\n    $random = 1..$length | ForEach-Object { Get-Random -Maximum $characters.length }\r\n    $private:ofs=\"\"\r\n    return [String]$characters[$random]\r\n}\r\n \r\nfunction Scramble-String([string]$inputString){     \r\n    $characterArray = $inputString.ToCharArray()   \r\n    $scrambledStringArray = $characterArray | Get-Random -Count $characterArray.Length     \r\n    $outputString = -join $scrambledStringArray\r\n    return $outputString \r\n}\r\n \r\n$rn1 = Get-Random -Minimum 2 -Maximum 7\r\n$rn2 = Get-Random -Minimum 2 -Maximum 7\r\n$rn3 = Get-Random -Minimum 2 -Maximum 7\r\n$rn4 = Get-Random -Minimum 2 -Maximum 7\r\n\r\n$password = Get-RandomCharacters -length $rn1 -characters 'abcdefghiklmnoprstuvwxyz'\r\n$password += Get-RandomCharacters -length $rn2 -characters 'ABCDEFGHKLMNOPRSTUVWXYZ'\r\n$password += Get-RandomCharacters -length $rn3 -characters '1234567890'\r\n$password += Get-RandomCharacters -length $rn4 -characters '!@#$%^&*'\r\n \r\n$password = Scramble-String $password\r\n \r\nWrite-Output $password | clip"
+        position:
+          x: 1243
+          y: 1766
+        variables:
+        - name: myvar
+          value: result
+        children:
+        - *o1
+        comment: ''
+      comment: ''
+    - id: 11
+      type: Custom operation
+      model:
+        name: UUID
+        iconGlyph: 
+        keyGesture: None
+        selected: false
+        positionPriority: 5
+      position:
+        x: 1001
+        y: 2240
+      variables:
+      - name: myvar
+        value: result
+      children:
+      - id: 12
+        type: PS Script
+        model:
+          powerShellExe: powershell.exe
+          stopOnError: true
+          runAsAdmin: false
+          showWindow: false
+          content: >-
+            $guid = [guid]::NewGuid().Guid
+
+            Write-Output $guid | clip
+        position:
+          x: 1232
+          y: 2241
+        variables:
+        - name: myvar
+          value: result
+        children:
+        - *o1
+        comment: ''
+      comment: ''
+    comment: ''
+  comment: 'Keyword: random'
+- id: 2
+  comment: ''
+- id: 5
+  comment: ''
+- id: 9
+  comment: ''
+- id: 7
+  comment: ''
+- id: 11
+  comment: ''
+- id: 1
+  comment: ''
+name: Random Everything
+author: gsak3l
+iconGlyph: 
+description: None
+enable: true
