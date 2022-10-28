@@ -1,0 +1,66 @@
+zoom: 0.59999999999999998
+offsetX: 1186
+offsetY: 1176.8
+children:
+- id: 0
+  type: Result selector
+  model:
+    name:
+      text: ''
+      textMatchType: Contains
+      matchCase: false
+    type:
+      text: Folder
+      textMatchType: Contains
+      matchCase: false
+    searchApp:
+      text: ''
+      textMatchType: Contains
+      matchCase: false
+    context:
+      text: ''
+      textMatchType: Contains
+      matchCase: false
+  position:
+    x: 103
+    y: 349
+  variables:
+  - name: searchResult
+    value: result
+  - name: folderPath
+    value: result.Context
+  children:
+  - id: 1
+    type: Custom operation
+    model:
+      name: Open in Windows Terminal
+      iconGlyph: 
+      keyGesture: Alt+T
+      selected: false
+      positionPriority: 2
+    position:
+      x: 406
+      y: 506
+    variables:
+    - name: path
+      value: result.Context
+    children:
+    - id: 2
+      type: PS Script
+      model:
+        runAsAdmin: false
+        showWindow: false
+        content: wt -w 0 nt -d "$folderPath"
+      position:
+        x: 782
+        y: 628
+      variables:
+      - name: myvar
+        value: result
+      children: []
+- id: 1
+name: Windows Terminal
+author: rzippo
+iconGlyph: 
+description: None
+enable: true
