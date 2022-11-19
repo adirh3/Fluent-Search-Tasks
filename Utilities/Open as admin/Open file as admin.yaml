@@ -1,0 +1,146 @@
+zoom: 0.6
+offsetX: 970.1332763671874
+offsetY: 830.7999511718749
+children:
+- id: 0
+  type: Result selector
+  model:
+    name:
+      text: ''
+      textMatchType: Contains
+      matchCase: false
+    type:
+      text: File
+      textMatchType: Exact
+      matchCase: false
+    searchApp:
+      text: ''
+      textMatchType: Contains
+      matchCase: false
+    context:
+      text: '*.exe'
+      textMatchType: Wildcard
+      matchCase: false
+  position:
+    x: 449
+    y: 866
+  variables:
+  - name: searchResult
+    value: result
+  children:
+  - id: 1
+    type: Custom operation
+    model:
+      name: Open As Admin
+      iconGlyph: 
+      icon:
+        value: 
+      keyGesture: Ctrl+E
+      selected: false
+      position: 3
+    position:
+      x: 762
+      y: 1063
+    variables:
+    - name: myvar
+      value: result
+    children:
+    - id: 2
+      type: Open
+      model:
+        fileName: '{searchResult.Context}'
+        runAsAdmin: true
+        arguments: ''
+      position:
+        x: 1008
+        y: 1058
+      variables:
+      - name: myvar
+        value: result
+      children:
+      - id: 3
+        type: Hide search window
+        position:
+          x: 1244
+          y: 1057
+        variables:
+        - name: myvar
+          value: result
+        children: []
+        comment: ''
+      comment: ''
+    comment: ''
+  comment: ''
+- id: 1
+  comment: ''
+- id: 4
+  type: Result selector
+  model:
+    name:
+      text: ''
+      textMatchType: Contains
+      matchCase: false
+    type:
+      text: File
+      textMatchType: Exact
+      matchCase: false
+    searchApp:
+      text: ''
+      textMatchType: Contains
+      matchCase: false
+    context:
+      text: '*.bat'
+      textMatchType: Wildcard
+      matchCase: false
+  position:
+    x: 450
+    y: 1039
+  variables:
+  - name: searchResult
+    value: result
+  children:
+  - id: 1
+    comment: ''
+  comment: ''
+- id: 5
+  type: Result selector
+  model:
+    name:
+      text: ''
+      textMatchType: Contains
+      matchCase: false
+    type:
+      text: File
+      textMatchType: Exact
+      matchCase: false
+    searchApp:
+      text: ''
+      textMatchType: Contains
+      matchCase: false
+    context:
+      text: '*.cmd'
+      textMatchType: Wildcard
+      matchCase: false
+  position:
+    x: 458
+    y: 1220
+  variables:
+  - name: searchResult
+    value: result
+  children:
+  - id: 1
+    comment: ''
+  comment: ''
+- id: 1
+  comment: ''
+name: Open file as admin
+author: Adir
+iconGlyph: 
+icon:
+  value: 
+description: Run .exe, .cmd, or .bat files as administrator
+enable: true
+taskProjectSettings:
+  id: a47485d5-6449-429f-bd58-ac94139ef294
+  showSettingPage: false
+  projectSettings: []
