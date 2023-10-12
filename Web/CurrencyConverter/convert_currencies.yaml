@@ -1,6 +1,6 @@
 zoom: 1
-offsetX: 305.5
-offsetY: 131
+offsetX: 88.16665039062485
+offsetY: 5.999999999999886
 children:
 - id: 0
   type: Search
@@ -25,37 +25,22 @@ children:
     type: HTTP Action
     model:
       method: Get
-      uRI: https://api.exchangerate.host/latest?base={searchText.Groups[2].Value.Replace("€","EUR").Replace("\\$","USD").ToUpper()}&amount={searchText.Groups[1].Value}&symbols={searchText.Groups[3].Value.Replace("€","EUR").Replace("$","USD").ToUpper()}
+      uRI: https://api.apilayer.com/currency_data/convert?from={searchText.Groups[2].Value.Replace("€","EUR").Replace("$","USD").ToUpper()}&amount={searchText.Groups[1].Value}&to={searchText.Groups[3].Value.Replace("€","EUR").Replace("$","USD").ToUpper()}
       sendJsonBody: false
-      headers: []
+      headers:
+      - name: apikey
+        value: XhdTauP1XDm5eQnsUVEjAknBixPpffta
     position:
       x: 1263
-      y: 1386
+      y: 1385
     variables:
     - name: myvar
       value: JsonNode.Parse(result)
     children:
     - id: 2
-      type: Custom result
-      model:
-        name: '{myvar["rates"][searchText.Groups[3].Value.Replace("€","EUR").Replace("$","USD").ToUpper()]}'
-        previewImageProviderSetting:
-          value: 
-        type: ''
-        group: ''
-        score: 20
-        iconGlyph: 
-        disabledMachineLearning: false
-        informationElements: []
-      position:
-        x: 1558
-        y: 1410
-      variables: []
-      children: []
-    - id: 3
       type: Copy text
       model:
-        text: '{myvar["rates"][searchText.Groups[3].Value.Replace("€","EUR").Replace("$","USD").ToUpper()]}'
+        text: '{myvar["result"]}'
       position:
         x: 1558
         y: 1570
@@ -63,8 +48,37 @@ children:
       - name: myvar
         value: result
       children: []
+      comment: ''
+    - id: 3
+      type: Custom result
+      model:
+        uniqueId: ff7477ae-3eeb-437b-8c1d-34a52ac6633c
+        name: '{myvar["result"]}'
+        previewImageProviderSetting:
+          value: 
+        type: ''
+        group: ''
+        score: 20
+        disabledMachineLearning: false
+        allowPinning: false
+        useChildResults: false
+        informationElements: []
+      position:
+        x: 1558
+        y: 1222
+      variables: []
+      children: []
+      comment: ''
+    comment: ''
+  comment: ''
 name: convert currencies
 author: eikaramba(notific.at)
 iconGlyph: 
+icon:
+  value: 
 description: None
 enable: true
+taskProjectSettings:
+  id: 55434fa7-1e3b-421c-94d7-6adb8db2c02b
+  showSettingPage: false
+  projectSettings: []
