@@ -4,7 +4,7 @@ Type e.g. `12 USD in EUR` to calculate and copy the EUR value into the clipboard
 
 <img width="591" alt="image" src="https://user-images.githubusercontent.com/1320525/175809476-2bd7a47a-5c2a-40cd-965f-8168f2055746.png">
 
-This is using the following API - `https://api.exchangerate.host`
+The Task uses an apikey of a trowaway account. 1000 requests per month are free, user can otherwise create one for free himself on apilayer.com.
 
 Supported Values are
 €
