@@ -4,7 +4,13 @@ Type e.g. `12 USD in EUR` to calculate and copy the EUR value into the clipboard
 
 <img width="591" alt="image" src="https://user-images.githubusercontent.com/1320525/175809476-2bd7a47a-5c2a-40cd-965f-8168f2055746.png">
 
-The Task uses an apikey of a trowaway account. 1000 requests per month are free, user can otherwise create one for free himself on apilayer.com.
+The included API key (XhdTauP1XDm5eQnsUVEjAknBixPpffta) supports 1000 free requests per month shared between all Fluent Search users. To ensure 1000 free requests for yourself:
+
+1. Create an account at https://apilayer.com
+2. Go to https://apilayer.com/marketplace/currency_data-api and get a free API key
+3. Paste it into the YAML, replacing the included API key (see above).
+4. Install the plugin by opening "Fluent Search - Tasks" from Fluent Search and drag the YAML file in there.
+
 
 Supported Values are
 €
