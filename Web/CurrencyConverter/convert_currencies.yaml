@@ -10,64 +10,96 @@ children:
     searchTagIcon:
       value: 
     searchedText:
-      text: (?i)([0-9,.]+)\s*(€|\$|AED|AFN|ALL|AMD|ANG|AOA|ARS|AUD|AWG|AZN|BAM|BBD|BDT|BGN|BHD|BIF|BMD|BND|BOB|BRL|BSD|BTC|BTN|BWP|BYN|BZD|CAD|CDF|CHF|CLF|CLP|CNH|CNY|COP|CRC|CUC|CUP|CVE|CZK|DJF|DKK|DOP|DZD|EGP|ERN|ETB|EUR|FJD|FKP|GBP|GEL|GGP|GHS|GIP|GMD|GNF|GTQ|GYD|HKD|HNL|HRK|HTG|HUF|IDR|ILS|IMP|INR|IQD|IRR|ISK|JEP|JMD|JOD|JPY|KES|KGS|KHR|KMF|KPW|KRW|KWD|KYD|KZT|LAK|LBP|LKR|LRD|LSL|LYD|MAD|MDL|MGA|MKD|MMK|MNT|MOP|MRU|MUR|MVR|MWK|MXN|MYR|MZN|NAD|NGN|NIO|NOK|NPR|NZD|OMR|PAB|PEN|PGK|PHP|PKR|PLN|PYG|QAR|RON|RSD|RUB|RWF|SAR|SBD|SCR|SDG|SEK|SGD|SHP|SLL|SOS|SRD|SSP|STD|STN|SVC|SYP|SZL|THB|TJS|TMT|TND|TOP|TRY|TTD|TWD|TZS|UAH|UGX|USD|UYU|UZS|VES|VND|VUV|WST|XAF|XAG|XAU|XCD|XDR|XOF|XPD|XPF|XPT|YER|ZAR|ZMW|ZWL)\s*(?:in|to)\s*(€|\$|AED|AFN|ALL|AMD|ANG|AOA|ARS|AUD|AWG|AZN|BAM|BBD|BDT|BGN|BHD|BIF|BMD|BND|BOB|BRL|BSD|BTC|BTN|BWP|BYN|BZD|CAD|CDF|CHF|CLF|CLP|CNH|CNY|COP|CRC|CUC|CUP|CVE|CZK|DJF|DKK|DOP|DZD|EGP|ERN|ETB|EUR|FJD|FKP|GBP|GEL|GGP|GHS|GIP|GMD|GNF|GTQ|GYD|HKD|HNL|HRK|HTG|HUF|IDR|ILS|IMP|INR|IQD|IRR|ISK|JEP|JMD|JOD|JPY|KES|KGS|KHR|KMF|KPW|KRW|KWD|KYD|KZT|LAK|LBP|LKR|LRD|LSL|LYD|MAD|MDL|MGA|MKD|MMK|MNT|MOP|MRU|MUR|MVR|MWK|MXN|MYR|MZN|NAD|NGN|NIO|NOK|NPR|NZD|OMR|PAB|PEN|PGK|PHP|PKR|PLN|PYG|QAR|RON|RSD|RUB|RWF|SAR|SBD|SCR|SDG|SEK|SGD|SHP|SLL|SOS|SRD|SSP|STD|STN|SVC|SYP|SZL|THB|TJS|TMT|TND|TOP|TRY|TTD|TWD|TZS|UAH|UGX|USD|UYU|UZS|VES|VND|VUV|WST|XAF|XAG|XAU|XCD|XDR|XOF|XPD|XPF|XPT|YER|ZAR|ZMW|ZWL)
+      text: (?i)([0-9,+/*().]+)\s*(€|\$|AED|AFN|ALL|AMD|ANG|AOA|ARS|AUD|AWG|AZN|BAM|BBD|BDT|BGN|BHD|BIF|BMD|BND|BOB|BRL|BSD|BTC|BTN|BWP|BYN|BZD|CAD|CDF|CHF|CLF|CLP|CNH|CNY|COP|CRC|CUC|CUP|CVE|CZK|DJF|DKK|DOP|DZD|EGP|ERN|ETB|EUR|FJD|FKP|GBP|GEL|GGP|GHS|GIP|GMD|GNF|GTQ|GYD|HKD|HNL|HRK|HTG|HUF|IDR|ILS|IMP|INR|IQD|IRR|ISK|JEP|JMD|JOD|JPY|KES|KGS|KHR|KMF|KPW|KRW|KWD|KYD|KZT|LAK|LBP|LKR|LRD|LSL|LYD|MAD|MDL|MGA|MKD|MMK|MNT|MOP|MRU|MUR|MVR|MWK|MXN|MYR|MZN|NAD|NGN|NIO|NOK|NPR|NZD|OMR|PAB|PEN|PGK|PHP|PKR|PLN|PYG|QAR|RON|RSD|RUB|RWF|SAR|SBD|SCR|SDG|SEK|SGD|SHP|SLL|SOS|SRD|SSP|STD|STN|SVC|SYP|SZL|THB|TJS|TMT|TND|TOP|TRY|TTD|TWD|TZS|UAH|UGX|USD|UYU|UZS|VES|VND|VUV|WST|XAF|XAG|XAU|XCD|XDR|XOF|XPD|XPF|XPT|YER|ZAR|ZMW|ZWL)\s*(?:in|to)?\s*(€|\$|AED|AFN|ALL|AMD|ANG|AOA|ARS|AUD|AWG|AZN|BAM|BBD|BDT|BGN|BHD|BIF|BMD|BND|BOB|BRL|BSD|BTC|BTN|BWP|BYN|BZD|CAD|CDF|CHF|CLF|CLP|CNH|CNY|COP|CRC|CUC|CUP|CVE|CZK|DJF|DKK|DOP|DZD|EGP|ERN|ETB|EUR|FJD|FKP|GBP|GEL|GGP|GHS|GIP|GMD|GNF|GTQ|GYD|HKD|HNL|HRK|HTG|HUF|IDR|ILS|IMP|INR|IQD|IRR|ISK|JEP|JMD|JOD|JPY|KES|KGS|KHR|KMF|KPW|KRW|KWD|KYD|KZT|LAK|LBP|LKR|LRD|LSL|LYD|MAD|MDL|MGA|MKD|MMK|MNT|MOP|MRU|MUR|MVR|MWK|MXN|MYR|MZN|NAD|NGN|NIO|NOK|NPR|NZD|OMR|PAB|PEN|PGK|PHP|PKR|PLN|PYG|QAR|RON|RSD|RUB|RWF|SAR|SBD|SCR|SDG|SEK|SGD|SHP|SLL|SOS|SRD|SSP|STD|STN|SVC|SYP|SZL|THB|TJS|TMT|TND|TOP|TRY|TTD|TWD|TZS|UAH|UGX|USD|UYU|UZS|VES|VND|VUV|WST|XAF|XAG|XAU|XCD|XDR|XOF|XPD|XPF|XPT|YER|ZAR|ZMW|ZWL)?
       textMatchType: Regex
       matchCase: false
     searchType: SearchAll
   position:
-    x: 887
-    y: 1389
+    x: 846
+    y: 1301
   variables:
   - name: searchText
-    value: Regex.Match(result.SearchedText, @"(?i)([0-9,.]+)\s*(€|\$|AED|AFN|ALL|AMD|ANG|AOA|ARS|AUD|AWG|AZN|BAM|BBD|BDT|BGN|BHD|BIF|BMD|BND|BOB|BRL|BSD|BTC|BTN|BWP|BYN|BZD|CAD|CDF|CHF|CLF|CLP|CNH|CNY|COP|CRC|CUC|CUP|CVE|CZK|DJF|DKK|DOP|DZD|EGP|ERN|ETB|EUR|FJD|FKP|GBP|GEL|GGP|GHS|GIP|GMD|GNF|GTQ|GYD|HKD|HNL|HRK|HTG|HUF|IDR|ILS|IMP|INR|IQD|IRR|ISK|JEP|JMD|JOD|JPY|KES|KGS|KHR|KMF|KPW|KRW|KWD|KYD|KZT|LAK|LBP|LKR|LRD|LSL|LYD|MAD|MDL|MGA|MKD|MMK|MNT|MOP|MRU|MUR|MVR|MWK|MXN|MYR|MZN|NAD|NGN|NIO|NOK|NPR|NZD|OMR|PAB|PEN|PGK|PHP|PKR|PLN|PYG|QAR|RON|RSD|RUB|RWF|SAR|SBD|SCR|SDG|SEK|SGD|SHP|SLL|SOS|SRD|SSP|STD|STN|SVC|SYP|SZL|THB|TJS|TMT|TND|TOP|TRY|TTD|TWD|TZS|UAH|UGX|USD|UYU|UZS|VES|VND|VUV|WST|XAF|XAG|XAU|XCD|XDR|XOF|XPD|XPF|XPT|YER|ZAR|ZMW|ZWL)\s*(?:in|to)\s*(€|\$|AED|AFN|ALL|AMD|ANG|AOA|ARS|AUD|AWG|AZN|BAM|BBD|BDT|BGN|BHD|BIF|BMD|BND|BOB|BRL|BSD|BTC|BTN|BWP|BYN|BZD|CAD|CDF|CHF|CLF|CLP|CNH|CNY|COP|CRC|CUC|CUP|CVE|CZK|DJF|DKK|DOP|DZD|EGP|ERN|ETB|EUR|FJD|FKP|GBP|GEL|GGP|GHS|GIP|GMD|GNF|GTQ|GYD|HKD|HNL|HRK|HTG|HUF|IDR|ILS|IMP|INR|IQD|IRR|ISK|JEP|JMD|JOD|JPY|KES|KGS|KHR|KMF|KPW|KRW|KWD|KYD|KZT|LAK|LBP|LKR|LRD|LSL|LYD|MAD|MDL|MGA|MKD|MMK|MNT|MOP|MRU|MUR|MVR|MWK|MXN|MYR|MZN|NAD|NGN|NIO|NOK|NPR|NZD|OMR|PAB|PEN|PGK|PHP|PKR|PLN|PYG|QAR|RON|RSD|RUB|RWF|SAR|SBD|SCR|SDG|SEK|SGD|SHP|SLL|SOS|SRD|SSP|STD|STN|SVC|SYP|SZL|THB|TJS|TMT|TND|TOP|TRY|TTD|TWD|TZS|UAH|UGX|USD|UYU|UZS|VES|VND|VUV|WST|XAF|XAG|XAU|XCD|XDR|XOF|XPD|XPF|XPT|YER|ZAR|ZMW|ZWL)", RegexOptions.IgnoreCase)
+    value: Regex.Match(result.SearchedText, @"(?i)([0-9,+/*().]+)\s*(€|\$|AED|AFN|ALL|AMD|ANG|AOA|ARS|AUD|AWG|AZN|BAM|BBD|BDT|BGN|BHD|BIF|BMD|BND|BOB|BRL|BSD|BTC|BTN|BWP|BYN|BZD|CAD|CDF|CHF|CLF|CLP|CNH|CNY|COP|CRC|CUC|CUP|CVE|CZK|DJF|DKK|DOP|DZD|EGP|ERN|ETB|EUR|FJD|FKP|GBP|GEL|GGP|GHS|GIP|GMD|GNF|GTQ|GYD|HKD|HNL|HRK|HTG|HUF|IDR|ILS|IMP|INR|IQD|IRR|ISK|JEP|JMD|JOD|JPY|KES|KGS|KHR|KMF|KPW|KRW|KWD|KYD|KZT|LAK|LBP|LKR|LRD|LSL|LYD|MAD|MDL|MGA|MKD|MMK|MNT|MOP|MRU|MUR|MVR|MWK|MXN|MYR|MZN|NAD|NGN|NIO|NOK|NPR|NZD|OMR|PAB|PEN|PGK|PHP|PKR|PLN|PYG|QAR|RON|RSD|RUB|RWF|SAR|SBD|SCR|SDG|SEK|SGD|SHP|SLL|SOS|SRD|SSP|STD|STN|SVC|SYP|SZL|THB|TJS|TMT|TND|TOP|TRY|TTD|TWD|TZS|UAH|UGX|USD|UYU|UZS|VES|VND|VUV|WST|XAF|XAG|XAU|XCD|XDR|XOF|XPD|XPF|XPT|YER|ZAR|ZMW|ZWL)\s*(?:in|to)?\s*(€|\$|AED|AFN|ALL|AMD|ANG|AOA|ARS|AUD|AWG|AZN|BAM|BBD|BDT|BGN|BHD|BIF|BMD|BND|BOB|BRL|BSD|BTC|BTN|BWP|BYN|BZD|CAD|CDF|CHF|CLF|CLP|CNH|CNY|COP|CRC|CUC|CUP|CVE|CZK|DJF|DKK|DOP|DZD|EGP|ERN|ETB|EUR|FJD|FKP|GBP|GEL|GGP|GHS|GIP|GMD|GNF|GTQ|GYD|HKD|HNL|HRK|HTG|HUF|IDR|ILS|IMP|INR|IQD|IRR|ISK|JEP|JMD|JOD|JPY|KES|KGS|KHR|KMF|KPW|KRW|KWD|KYD|KZT|LAK|LBP|LKR|LRD|LSL|LYD|MAD|MDL|MGA|MKD|MMK|MNT|MOP|MRU|MUR|MVR|MWK|MXN|MYR|MZN|NAD|NGN|NIO|NOK|NPR|NZD|OMR|PAB|PEN|PGK|PHP|PKR|PLN|PYG|QAR|RON|RSD|RUB|RWF|SAR|SBD|SCR|SDG|SEK|SGD|SHP|SLL|SOS|SRD|SSP|STD|STN|SVC|SYP|SZL|THB|TJS|TMT|TND|TOP|TRY|TTD|TWD|TZS|UAH|UGX|USD|UYU|UZS|VES|VND|VUV|WST|XAF|XAG|XAU|XCD|XDR|XOF|XPD|XPF|XPT|YER|ZAR|ZMW|ZWL)?", RegexOptions.IgnoreCase)
   children:
   - id: 1
-    type: HTTP Action
+    type: C# Script
     model:
-      method: Get
-      uRI: https://api.apilayer.com/currency_data/convert?from={searchText.Groups[2].Value.Replace("€","EUR").Replace("$","USD").ToUpper()}&amount={searchText.Groups[1].Value}&to={searchText.Groups[3].Value.Replace("€","EUR").Replace("$","USD").ToUpper()}
-      sendJsonBody: false
-      headers:
-      - name: apikey
-        value: XhdTauP1XDm5eQnsUVEjAknBixPpffta
+      content: >-
+        using System.Data;
+
+
+        DataTable dt = new DataTable();
+
+        var v = "" + dt.Compute(searchText.Groups[1].Value,"");
+
+        String[] array1 = new String[3];
+
+        array1[0] = searchText.Groups[2].Value;
+
+        array1[1] = v;
+
+        if (String.IsNullOrEmpty(searchText.Groups[3].Value)) {
+        	array1[2] = defaultCurrency;
+        }else{
+        	array1[2] = searchText.Groups[3].Value;
+        }
+
+        return array1;
     position:
-      x: 1263
-      y: 1385
+      x: 1047
+      y: 1387
     variables:
-    - name: myvar
-      value: JsonNode.Parse(result)
+    - name: scriptResult
+      value: result
     children:
     - id: 2
-      type: Copy text
+      type: HTTP Action
       model:
-        text: '{myvar["result"]}'
+        method: Get
+        uRI: https://api.apilayer.com/currency_data/convert?from={scriptResult[0].Replace("€","EUR").Replace("$","USD").ToUpper()}&amount={scriptResult[1]}&to={scriptResult[2].Replace("€","EUR").Replace("$","USD").ToUpper()}
+        sendJsonBody: false
+        headers:
+        - name: apikey
+          value: '{apiKey}'
       position:
-        x: 1558
-        y: 1570
+        x: 1263
+        y: 1384
       variables:
       - name: myvar
-        value: result
-      children: []
-      comment: ''
-    - id: 3
-      type: Custom result
-      model:
-        uniqueId: ff7477ae-3eeb-437b-8c1d-34a52ac6633c
-        name: '{myvar["result"]}'
-        previewImageProviderSetting:
-          value: 
-        type: ''
-        group: ''
-        score: 20
-        disabledMachineLearning: false
-        allowPinning: false
-        useChildResults: false
-        informationElements: []
-      position:
-        x: 1558
-        y: 1222
-      variables: []
-      children: []
+        value: JsonNode.Parse(result)
+      children:
+      - id: 3
+        type: Custom result
+        model:
+          uniqueId: ff7477ae-3eeb-437b-8c1d-34a52ac6633c
+          name: '{myvar["result"]}'
+          previewImageProviderSetting:
+            value: 
+          type: ''
+          group: ''
+          score: 20
+          disabledMachineLearning: false
+          allowPinning: false
+          useChildResults: false
+          informationElements: []
+        position:
+          x: 1558
+          y: 1222
+        variables: []
+        children: []
+        comment: ''
+      - id: 4
+        type: Copy text
+        model:
+          text: '{myvar["result"]}'
+        position:
+          x: 1558
+          y: 1570
+        variables:
+        - name: myvar
+          value: result
+        children: []
+        comment: ''
       comment: ''
     comment: ''
   comment: ''
@@ -76,9 +108,31 @@ author: eikaramba(notific.at)
 iconGlyph: 
 icon:
   value: 
-description: None
+description: Convert monetary values
 enable: true
 taskProjectSettings:
   id: 55434fa7-1e3b-421c-94d7-6adb8db2c02b
-  showSettingPage: false
-  projectSettings: []
+  showSettingPage: true
+  projectSettings:
+  - variableName: apiKey
+    name: API Key
+    groupName: ''
+    category: ''
+    description: Ideally create your own key on apilayer.com
+    settingType: Text
+    icon: 
+    defaultValue: ME7HRZZ0f4tLWf0OsmMW8UnM0W83h6ej
+    valueRange:
+      min: 0
+      max: 100
+  - variableName: defaultCurrency
+    name: Default Currency
+    groupName: ''
+    category: ''
+    description: Specify a default currency to directly convert e.g. "120 usd". Default value is "USD"
+    settingType: Text
+    icon: 
+    defaultValue: USD
+    valueRange:
+      min: 0
+      max: 100
