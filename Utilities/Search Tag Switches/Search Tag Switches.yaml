@@ -1,19 +1,20 @@
-zoom: 0.63170150399999991
-offsetX: 731.00296809876636
-offsetY: 391.38164108641951
+zoom: 0.6317015039999999
+offsetX: 731.0029680987664
+offsetY: 391.3816410864195
 children:
 - id: 0
   type: Search
   model:
     searchPrefix: '?'
     searchedTagExact: ''
-    searchTagIcon: &o0
+    searchTagIcon:
       value: 
     searchedText:
       text: ''
-      textMatchType: Exact
+      textMatchType: Contains
       matchCase: false
     searchType: SearchAll
+  version: 1.0.0.0
   position:
     x: 840
     y: 1275
@@ -27,8 +28,10 @@ children:
     type: Show and search
     model:
       searchText: ''
-      searchTag: folder
-      searchType: SearchAll
+      searchTags:
+        searchTagSettings:
+        - tag: folder
+    version: 1.0.0.1
     position:
       x: 1167
       y: 1306
@@ -43,12 +46,14 @@ children:
   model:
     searchPrefix: ??
     searchedTagExact: ''
-    searchTagIcon: *o0
+    searchTagIcon:
+      value: 
     searchedText:
       text: ''
-      textMatchType: Exact
+      textMatchType: Contains
       matchCase: false
     searchType: SearchAll
+  version: 1.0.0.0
   position:
     x: 826
     y: 1515
@@ -62,8 +67,10 @@ children:
     type: Show and search
     model:
       searchText: ''
-      searchTag: web
-      searchType: SearchAll
+      searchTags:
+        searchTagSettings:
+        - tag: web
+    version: 1.0.0.1
     position:
       x: 1188
       y: 1519
@@ -78,12 +85,14 @@ children:
   model:
     searchPrefix: .
     searchedTagExact: ''
-    searchTagIcon: *o0
+    searchTagIcon:
+      value: 
     searchedText:
       text: ''
-      textMatchType: Exact
+      textMatchType: Contains
       matchCase: false
     searchType: SearchAll
+  version: 1.0.0.0
   position:
     x: 820
     y: 1725
@@ -97,8 +106,10 @@ children:
     type: Show and search
     model:
       searchText: ''
-      searchTag: apps
-      searchType: SearchAll
+      searchTags:
+        searchTagSettings:
+        - tag: apps
+    version: 1.0.0.1
     position:
       x: 1181
       y: 1731
@@ -113,12 +124,14 @@ children:
   model:
     searchPrefix: $
     searchedTagExact: ''
-    searchTagIcon: *o0
+    searchTagIcon:
+      value: 
     searchedText:
       text: ''
-      textMatchType: Exact
+      textMatchType: Contains
       matchCase: false
     searchType: SearchAll
+  version: 1.0.0.0
   position:
     x: 831
     y: 1947
@@ -132,8 +145,10 @@ children:
     type: Show and search
     model:
       searchText: ''
-      searchTag: settings
-      searchType: SearchAll
+      searchTags:
+        searchTagSettings:
+        - tag: settings
+    version: 1.0.0.1
     position:
       x: 1184
       y: 1964
@@ -145,5 +160,11 @@ children:
   comment: When typing "$" then space, search for settings
 name: PT switches
 iconGlyph: 
+icon:
+  value: 
 description: None
 enable: true
+taskProjectSettings:
+  id: 44c130a8-0a78-4a20-82f4-03b969724234
+  showSettingPage: false
+  projectSettings: []
