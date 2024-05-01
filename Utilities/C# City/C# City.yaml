@@ -1,5 +1,5 @@
-zoom: 0.75804180479999983
-offsetX: 602.88504320000038
+zoom: 0.7580418047999998
+offsetX: 602.8850432000004
 offsetY: 216.1553767111107
 children:
 - id: 0
@@ -14,6 +14,7 @@ children:
       textMatchType: Wildcard
       matchCase: false
     searchType: SearchAll
+  version: 1.0.0.0
   position:
     x: 801
     y: 1325
@@ -26,7 +27,9 @@ children:
   - id: 1
     type: C# Script
     model:
+      enableVariableInline: true
       content: return {searchText.Substring(1, searchText.Length - 2)};
+    version: 1.0.0.0
     position:
       x: 1100
       y: 1412
@@ -37,15 +40,18 @@ children:
     - id: 2
       type: Custom result
       model:
+        uniqueId: 3386a114-80ab-4497-9556-55abc59a9756
         name: '{scriptResult}'
-        previewImageProviderSetting: &o0
+        previewImageProviderSetting:
           value: 
         type: C#
         group: ''
         score: 100
-        iconGlyph: 
         disabledMachineLearning: false
+        allowPinning: false
+        useChildResults: false
         informationElements: []
+      version: 1.0.0.0
       position:
         x: 1382
         y: 1622
@@ -69,12 +75,14 @@ children:
   model:
     searchPrefix: ''
     searchedTagExact: csharp
-    searchTagIcon: *o0
+    searchTagIcon:
+      value: 
     searchedText:
       text: ''
       textMatchType: Contains
       matchCase: false
     searchType: SearchAll
+  version: 1.0.0.0
   position:
     x: 797
     y: 1666
@@ -87,7 +95,9 @@ children:
   - id: 4
     type: C# Script
     model:
+      enableVariableInline: true
       content: return {searchText};
+    version: 1.0.0.0
     position:
       x: 1088
       y: 1764
@@ -96,6 +106,7 @@ children:
       value: result
     children:
     - id: 2
+      version: 1.0.0.0
       comment: ''
     comment: >-
       Run a custom C# script based on the {searchText} variable.
@@ -107,5 +118,11 @@ children:
 name: C# City
 author: Adir
 iconGlyph: 
+icon:
+  value: 
 description: None
 enable: true
+taskProjectSettings:
+  id: 78bf0e8b-53e4-4019-91d2-6c9b74c261da
+  showSettingPage: false
+  projectSettings: []
