@@ -16,8 +16,8 @@ children:
     searchType: SearchAll
   version: 1.0.0.0
   position:
-    x: 1183
-    y: 1752
+    x: 1023
+    y: 1793
   variables:
   - name: searchText
     value: result.SearchedText
@@ -25,56 +25,94 @@ children:
     value: result.SearchedTag
   children:
   - id: 1
-    type: Custom result
+    type: Condition
     model:
-      uniqueId: 031f5cba-1d49-497f-8220-6b8358ab2e85
-      name: '{searchText}'
-      previewImageProviderSetting:
-        value: 
-      context: ''
-      type: Color
-      group: ''
-      score: 100
-      disabledMachineLearning: false
-      allowPinning: false
-      useChildResults: false
-      autoPreview: false
-      informationElements: []
+      value: '{Avalonia.Media.Color.TryParse(searchText, out Avalonia.Media.Color color)}'
+      continueIfTrue: true
     version: 1.0.0.0
     position:
-      x: 1475
-      y: 1811
+      x: 1247
+      y: 1919
     variables:
-    - name: searchResult
+    - name: myvar
       value: result
     children:
     - id: 2
-      type: C# Script
+      type: Custom result
       model:
-        enableVariableInline: false
-        content: >-
-          Blast.API.Core.UI.UiUtilities.UiDispatcher.Post(()=>
-
-          {searchResult.CustomControl = new Avalonia.Controls.Border()
-                      {
-                          Width = 300, Height = 300,
-                          Background = new Avalonia.Media.SolidColorBrush(Avalonia.Media.Color.Parse(searchText))
-                      };
-          searchResult.UseCustomControl = true;
-
-          });
-
-          return true;
+        uniqueId: 031f5cba-1d49-497f-8220-6b8358ab2e85
+        name: '{Avalonia.Media.Color.Parse(searchText).ToString()}'
+        previewImageProviderSetting:
+          value: 
+        context: ''
+        type: Color
+        group: ''
+        score: 100
+        disabledMachineLearning: false
+        allowPinning: false
+        useChildResults: false
+        autoPreview: false
+        informationElements: []
       version: 1.0.0.0
       position:
-        x: 1701
-        y: 1890
+        x: 1487
+        y: 2000
       variables:
-      - name: scriptResult
+      - name: searchResult
         value: result
-      children: []
-      comment: ''
-    comment: ''
+      children:
+      - id: 3
+        type: C# Script
+        model:
+          enableVariableInline: false
+          content: >-
+            using Blast.Core;
+
+            using Blast.API.Core.UI;
+
+            using Avalonia.Controls;
+
+            using Avalonia.Media;
+
+            using Avalonia.Media.Immutable;
+
+            using Avalonia.Markup.Xaml.MarkupExtensions;
+
+
+            Color color = Color.Parse(searchText);
+
+            ImmutableSolidColorBrush solidColorBrush = new ImmutableSolidColorBrush(color);
+
+
+            // We can update result content only in the UI thread
+
+            UiUtilities.UiDispatcher.Post(() =>
+
+            {
+                searchResult.CustomControl = new Border()
+                {
+                    Width = 300, Height = 300,
+                    [!Border.CornerRadiusProperty] = BlastBindings.CardCornerRadius,
+                    Background = solidColorBrush
+                };
+                searchResult.UseCustomControl = true;
+            });
+
+            return true;
+        version: 1.0.0.0
+        position:
+          x: 1720
+          y: 2127
+        variables:
+        - name: scriptResult
+          value: result
+        children: []
+        comment: Create a custom Avalonia control that presents the color
+      comment: Create custom result with name of the text
+    comment: Try parse the searched text into color
+  comment: 'Regex only #RRGGBB cor #AARRGGBB'
+- id: 1
+  version: 1.0.0.0
   comment: ''
 name: Color preview
 author: Adir
