@@ -1,0 +1,455 @@
+name: Lorem Ipsum Generator
+description: None
+enable: true
+iconGlyph: 
+icon:
+  value: 
+taskProjectSettings:
+  id: ffe08fde-b22a-4110-9961-048122761d53
+  showSettingPage: false
+  projectSettings:
+  - variableName: loremIpsumText
+    name: Lorem Ipsum Generator
+    groupName: ''
+    category: ''
+    description: Task setting description
+    settingType: Text
+    icon: 
+    defaultValue: 'Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Curabitur blandit tempus ardua ridiculus sed magna. Inmensae subtilitatis, obscuris et malesuada fames. Paullum deliquit, ponderibus modulisque suis ratio utitur. Pellentesque habitant morbi tristique senectus et netus. A communi observantia non est recedendum. Unam incolunt Belgae, aliam Aquitani, tertiam. Magna pars studiorum, prodita quaerimus. Gallia est omnis divisa in partes tres, quarum. Phasellus laoreet lorem vel dolor tempus vehicula. Cras mattis iudicium purus sit amet fermentum. Nec dubitamus multa iter quae et nos invenerat. Quo usque tandem abutere, Catilina, patientia nostra? Curabitur est gravida et libero vitae dictum. Quisque ut dolor gravida, placerat libero vel, euismod. Ullamco laboris nisi ut aliquid ex ea commodi consequat. Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Donec sed odio operae, eu vulputate felis rhoncus. Salutantibus vitae elit libero, a pharetra augue. Nihil hic munitissimus habendi senatus locus, nihil horum? A communi observantia non est recedendum. Curabitur blandit tempus ardua ridiculus sed magna. Sed haec quis possit intrepidus aestimare tellus. Quisque ut dolor gravida, placerat libero vel, euismod. Plura mihi bona sunt, inclinet, amari petere vellent. Fictum, deserunt mollit anim laborum astutumque! Quisque placerat facilisis egestas cillum dolore. Nec dubitamus multa iter quae et nos invenerat. Contra legem facit qui id facit quod lex prohibet. Quam diu etiam furor iste tuus nos eludet? Plura mihi bona sunt, inclinet, amari petere vellent. Ab illo tempore, ab est sed immemorabili. Ullamco laboris nisi ut aliquid ex ea commodi consequat. Quae vero auctorem tractata ab fiducia dicuntur. At nos hinc posthac, sitientis piros Afros. Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Me non paenitet nullum festiviorem excogitasse ad hoc. Ambitioni dedisse scripsisse iudicaretur. Unam incolunt Belgae, aliam Aquitani, tertiam. Morbi fringilla convallis sapien, id pulvinar odio volutpat. A communi observantia non est recedendum. Quisque ut dolor gravida, placerat libero vel, euismod. Ambitioni dedisse scripsisse iudicaretur. Donec sed odio operae, eu vulputate felis rhoncus. Nihilne te nocturnum praesidium Palati, nihil urbis vigiliae. Fabio vel iudice vincam, sunt in culpa qui officia. Inmensae subtilitatis, obscuris et malesuada fames. Ambitioni dedisse scripsisse iudicaretur. Nec dubitamus multa iter quae et nos invenerat. Petierunt uti sibi concilium totius Galliae in diem certam indicere. A communi observantia non est recedendum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus. Nihilne te nocturnum praesidium Palati, nihil urbis vigiliae. Non equidem invideo, miror magis posuere velit aliquet. Quisque placerat facilisis egestas cillum dolore. Curabitur blandit tempus ardua ridiculus sed magna. Contra legem facit qui id facit quod lex prohibet. Petierunt uti sibi concilium totius Galliae in diem certam indicere. Ab illo tempore, ab est sed immemorabili. Cum sociis natoque penatibus et magnis dis parturient. Quam diu etiam furor iste tuus nos eludet? Ut enim ad minim veniam, quis nostrud exercitation. Nihilne te nocturnum praesidium Palati, nihil urbis vigiliae. Salutantibus vitae elit libero, a pharetra augue. Quam diu etiam furor iste tuus nos eludet? Fabio vel iudice vincam, sunt in culpa qui officia. Quam temere in vitiis, legem sancimus haerentia. Quisque ut dolor gravida, placerat libero vel, euismod. Morbi fringilla convallis sapien, id pulvinar odio volutpat. Hi omnes lingua, institutis, legibus inter se differunt. Non equidem invideo, miror magis posuere velit aliquet. Quid securi etiam tamquam eu fugiat nulla pariatur. Inmensae subtilitatis, obscuris et malesuada fames. Fictum, deserunt mollit anim laborum astutumque! Cum sociis natoque penatibus et magnis dis parturient. Curabitur blandit tempus ardua ridiculus sed magna. Salutantibus vitae elit libero, a pharetra augue. Petierunt uti sibi concilium totius Galliae in diem certam indicere. Morbi fringilla convallis sapien, id pulvinar odio volutpat. A communi observantia non est recedendum. Phasellus laoreet lorem vel dolor tempus vehicula. Idque Caesaris facere voluntate liceret: sese habere. Ab illo tempore, ab est sed immemorabili. Mercedem aut nummos unde unde extricat, amaras. Praeterea iter est quasdam res quas ex communi.'
+    valueRange:
+      min: 0
+      max: 100
+zoom: 0.5554622306859486
+offsetX: 1163.6000125227479
+offsetY: 730.6624976148993
+children:
+- id: 0
+  type: Search
+  model:
+    searchPrefix: ''
+    searchedTagExact: ''
+    searchTagIcon:
+      value: 
+    searchedText:
+      text: ^lorem (\d*)$
+      textMatchType: Regex
+      matchCase: false
+    searchType: SearchAll
+  version: 1.0.0.0
+  position:
+    x: 50
+    y: 1395
+  variables:
+  - name: searchText
+    value: result.SearchedText
+  - name: searchTag
+    value: result.SearchedTag
+  children:
+  - id: 1
+    type: Condition
+    model:
+      value: '{Regex.Match(searchText, "^lorem $").Success}'
+      continueIfTrue: true
+    version: 1.0.0.0
+    position:
+      x: 260
+      y: 1348
+    variables:
+    - name: myvar
+      value: result
+    children:
+    - id: 2
+      type: Custom result
+      model:
+        uniqueId: fd5e6fd2-45f4-4e9c-a9cf-2dc5f5c739ba
+        name: Paragraph
+        previewImageProviderSetting:
+          value: 
+        context: ''
+        type: Text
+        group: ''
+        score: 100
+        disabledMachineLearning: false
+        allowPinning: false
+        useChildResults: false
+        autoPreview: false
+        informationElements: []
+      version: 1.0.0.0
+      position:
+        x: 456
+        y: 1163
+      variables:
+      - name: searchResult
+        value: result
+      children:
+      - id: 3
+        type: C# Script
+        model:
+          enableVariableInline: false
+          content: >-
+            var phrases = loremIpsumText.Split(new[] { "." }, StringSplitOptions.RemoveEmptyEntries);
+
+            var random = new Random();
+
+            int numberOfPhrases = random.Next(3, 7); // between 3 and 6
+
+            var paragraph = 
+            	string.Join(" ", Enumerable.Range(0, numberOfPhrases)
+            	.Select(_ => phrases[random.Next(phrases.Length)]
+            	.Trim() + "."));
+
+            return paragraph;
+        version: 1.0.0.0
+        position:
+          x: 869
+          y: 1166
+        variables:
+        - name: paragraph
+          value: result
+        children:
+        - id: 4
+          type: C# Script
+          model:
+            enableVariableInline: false
+            content: "using Avalonia;\nusing Avalonia.Controls;\nusing Avalonia.Media;\nusing Avalonia.Layout;\nusing System.Collections.ObjectModel;\nusing Blast.Core.Objects;\n\nstring wordCount = paragraph.Split(new[] {\n	' ', '\\n', '\\r'\n}, StringSplitOptions.RemoveEmptyEntries).Length.ToString();\n\nstring characterCount = paragraph.Length.ToString();\n\nBlast.API.Core.UI.UiUtilities.UiDispatcher.Post(() => {\n\n	var textBlock = new SelectableTextBlock {\n    	Text = paragraph,\n    	FontSize = 20,\n    	HorizontalAlignment = HorizontalAlignment.Center,\n    	VerticalAlignment = VerticalAlignment.Center,\n    	TextAlignment = TextAlignment.Center,\n    	TextWrapping = TextWrapping.Wrap,\n    	Padding = new Thickness(10, 0, 10 ,0),\n    };\n    \n    var container = new ScrollViewer {\n		Content = textBlock,\n		MaxHeight = 210,\n		HorizontalAlignment = HorizontalAlignment.Stretch,\n	    VerticalAlignment = VerticalAlignment.Stretch,\n	};\n	\n    searchResult.CustomControl = container;\n    searchResult.UseCustomControl = true;\n    \n});\n\nsearchResult.InformationElements = new ObservableCollection<Blast.Core.Objects.InformationElement> {\n	new InformationElement {\n		Name = \"Words\",\n		Value = wordCount,\n		CopyValue = wordCount\n	},\n	new InformationElement {\n		Name = \"Characters\",\n		Value = characterCount,\n		CopyValue = characterCount\n	}\n};\n\nreturn true;\n"
+          version: 1.0.0.0
+          position:
+            x: 1075
+            y: 1243
+          variables:
+          - name: csharpScriptResult
+            value: result
+          children: []
+          comment: ''
+        - id: 5
+          type: C# Script
+          model:
+            enableVariableInline: false
+            content: >-
+              using Blast.API.Search.SearchOperations;
+
+
+              searchResult.Context = paragraph;
+
+
+              var pO = new PasteSearchOperationSelfRun();
+
+              var cO = new CopySearchOperationSelfRun();
+
+
+              if(searchResult.SupportedOperations.Contains(pO) && searchResult.SupportedOperations.Contains(cO)) {
+              	return true;
+              }
+
+              searchResult.SupportedOperations.Add(pO);
+
+              searchResult.SupportedOperations.Add(cO);
+
+              searchResult.FocusedOperation = pO;
+
+
+              return true;
+          version: 1.0.0.0
+          position:
+            x: 669
+            y: 1275
+          variables:
+          - name: csharpScriptResult
+            value: result
+          children: []
+          comment: ''
+        comment: ''
+      - id: 5
+        version: 1.0.0.0
+        comment: ''
+      - id: 6
+        type: Custom operation
+        model:
+          name: Generate
+          iconGlyph: 
+          icon:
+            value: 
+          keyGesture: Ctrl+R
+          selected: false
+          position: 3
+        version: 1.0.0.0
+        position:
+          x: 664
+          y: 1046
+        variables:
+        - name: selectedSearchOperation
+          value: result
+        children:
+        - id: 3
+          version: 1.0.0.0
+          comment: ''
+        comment: ''
+      comment: ''
+    - id: 7
+      type: Custom result
+      model:
+        uniqueId: 03c91ead-a4cf-47f1-a481-0257cac9b9c9
+        name: Sentence
+        previewImageProviderSetting:
+          value: 
+        context: ''
+        type: Text
+        group: ''
+        score: 100
+        disabledMachineLearning: false
+        allowPinning: false
+        useChildResults: false
+        autoPreview: false
+        informationElements: []
+      version: 1.0.0.0
+      position:
+        x: 467
+        y: 1549
+      variables:
+      - name: searchResult
+        value: result
+      children:
+      - id: 8
+        type: C# Script
+        model:
+          enableVariableInline: false
+          content: >-
+            var phrases = loremIpsumText
+            	.Split(new[] { "." }, StringSplitOptions.RemoveEmptyEntries);
+            var random = new Random();
+
+            var phrase = phrases[random.Next(phrases.Length)].Trim() + ".";
+
+
+            return phrase;
+        version: 1.0.0.0
+        position:
+          x: 896
+          y: 1543
+        variables:
+        - name: phrase
+          value: result
+        children:
+        - id: 9
+          type: C# Script
+          model:
+            enableVariableInline: false
+            content: "using Avalonia;\nusing Avalonia.Controls;\nusing Avalonia.Media;\nusing Avalonia.Layout;\nusing Avalonia.Input.Platform;\nusing System.Collections.ObjectModel;\nusing Blast.Core.Objects;\n\nstring wordCount = phrase.Split(new[] {\n	' ', '\\n', '\\r'\n}, StringSplitOptions.RemoveEmptyEntries).Length.ToString();\n\nstring characterCount = phrase.Length.ToString();\n\nBlast.API.Core.UI.UiUtilities.UiDispatcher.Post(() => {\n	var textBlock = new SelectableTextBlock() {\n    	Text = phrase,\n    	FontSize = 20,\n    	HorizontalAlignment = HorizontalAlignment.Center,\n    	VerticalAlignment = VerticalAlignment.Center,\n    	TextAlignment = TextAlignment.Center,\n    	TextWrapping = TextWrapping.Wrap,\n    	Padding = new Thickness(10, 0, 10 ,0),\n    };\n    var copyMenuItem = new MenuItem {\n    	Header = \"Copy\",\n    };\n    copyMenuItem.Click += async (_, _) => {\n    	var clipboard = AvaloniaLocator.Current.GetService<IClipboard>();\n    	await clipboard.SetTextAsync(textBlock.Text);\n    };\n    \n    var contextMenu = new ContextMenu {\n    	Items = { copyMenuItem }\n    };\n    \n    textBlock.ContextMenu = contextMenu;\n    \n    searchResult.CustomControl = textBlock;\n	searchResult.UseCustomControl = true;\n});\n\nsearchResult.InformationElements = new ObservableCollection<Blast.Core.Objects.InformationElement> {\n	new InformationElement {\n		Name = \"Words\",\n		Value = wordCount,\n		CopyValue = wordCount\n	},\n	new InformationElement {\n		Name = \"Characters\",\n		Value = characterCount,\n		CopyValue = characterCount\n	}\n};\n\nreturn true;\n"
+          version: 1.0.0.0
+          position:
+            x: 1114
+            y: 1587
+          variables:
+          - name: csharp
+            value: result.ToString()
+          children: []
+          comment: ''
+        - id: 10
+          type: C# Script
+          model:
+            enableVariableInline: false
+            content: >-
+              using Blast.API.Search.SearchOperations;
+
+
+              searchResult.Context = phrase;
+
+
+              var pO = new PasteSearchOperationSelfRun();
+
+              var cO = new CopySearchOperationSelfRun();
+
+
+              if(searchResult.SupportedOperations.Contains(pO) && searchResult.SupportedOperations.Contains(cO)) {
+              	return true;
+              }
+
+              searchResult.SupportedOperations.Add(pO);
+
+              searchResult.SupportedOperations.Add(cO);
+
+              searchResult.FocusedOperation = pO;
+
+
+              return true;
+          version: 1.0.0.0
+          position:
+            x: 687
+            y: 1666
+          variables:
+          - name: csharpScriptResult
+            value: result
+          children: []
+          comment: ''
+        comment: ''
+      - id: 10
+        version: 1.0.0.0
+        comment: ''
+      - id: 11
+        type: Custom operation
+        model:
+          name: Generate
+          iconGlyph: 
+          icon:
+            value: 
+          keyGesture: Ctrl+R
+          selected: false
+          position: 3
+        version: 1.0.0.0
+        position:
+          x: 679
+          y: 1449
+        variables:
+        - name: selectedSearchOperation
+          value: result
+        children:
+        - id: 8
+          version: 1.0.0.0
+          comment: ''
+        comment: ''
+      comment: ''
+    comment: ''
+  - id: 12
+    type: Condition
+    model:
+      value: '{Regex.Match(searchText, @"^lorem (\d+)$").Success}'
+      continueIfTrue: true
+    version: 1.0.0.0
+    position:
+      x: 262
+      y: 1580
+    variables:
+    - name: myvar
+      value: result
+    children:
+    - id: 13
+      type: C# Script
+      model:
+        enableVariableInline: false
+        content: >-
+          using System;
+
+          using System.Linq;
+
+
+          var words = loremIpsumText
+          	.Trim()
+          	.Split(new[] { ' ', '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries);
+
+          var match = Regex.Match(searchText, @"^lorem (\d+)$");
+
+
+          int wordCount = Math.Min(int.Parse(match.Groups[1].Value), words.Length);
+
+          if(wordCount > 0 && wordCount < words.Length) {
+          	return string.Join(" ", words, 0, wordCount).TrimEnd(',', '.', ';', ':', '!', '?');
+          }
+          	
+          return null;
+      version: 1.0.0.0
+      position:
+        x: 464
+        y: 1727
+      variables:
+      - name: dynamic
+        value: result.ToString()
+      children:
+      - id: 14
+        type: Custom result
+        model:
+          uniqueId: b18781bf-cb5d-4040-a113-446f256511a8
+          name: Lorem Dynamic Text
+          previewImageProviderSetting:
+            value: 
+          type: Text
+          group: ''
+          score: 100
+          disabledMachineLearning: false
+          allowPinning: false
+          useChildResults: false
+          autoPreview: false
+          informationElements:
+          - name: Word
+            value: "{searchText.Split(' ')[1]}"
+            copyValue: ''
+          - name: Charater
+            value: '{dynamic.Length}'
+            copyValue: ''
+        version: 1.0.0.0
+        position:
+          x: 674
+          y: 1879
+        variables:
+        - name: searchResult
+          value: result
+        children:
+        - id: 15
+          type: C# Script
+          model:
+            enableVariableInline: false
+            content: "using Avalonia;\nusing Avalonia.Controls;\nusing Avalonia.Media;\nusing Avalonia.Layout;\n\nBlast.API.Core.UI.UiUtilities.UiDispatcher.Post(() => {\n\n	var textBlock = new SelectableTextBlock() {\n    	Text = dynamic,\n    	FontSize = 20,\n    	HorizontalAlignment = HorizontalAlignment.Center,\n    	VerticalAlignment = VerticalAlignment.Center,\n    	TextAlignment = TextAlignment.Center,\n    	TextWrapping = TextWrapping.Wrap,\n    	Padding = new Thickness(10, 0, 10 ,0),\n    	Margin = new Thickness(0, 0, 0 , 10)\n    };\n    \n    var container = new ScrollViewer {\n		Content = textBlock,\n		MaxHeight = 250,\n		HorizontalAlignment = HorizontalAlignment.Stretch,\n	    VerticalAlignment = VerticalAlignment.Stretch,\n	};\n    \n    searchResult.CustomControl = container;\n    searchResult.UseCustomControl = true;\n\n});\nreturn true;\n"
+          version: 1.0.0.0
+          position:
+            x: 911
+            y: 1963
+          variables:
+          - name: csharpScriptResult
+            value: result
+          children: []
+          comment: ''
+        - id: 16
+          type: C# Script
+          model:
+            enableVariableInline: false
+            content: >-
+              using Blast.API.Search.SearchOperations;
+
+
+              searchResult.Context = dynamic;
+
+
+              var pO = new PasteSearchOperationSelfRun();
+
+              var cO = new CopySearchOperationSelfRun();
+
+
+              if(searchResult.SupportedOperations.Contains(pO) && searchResult.SupportedOperations.Contains(cO)) {
+              	return true;
+              }
+
+              searchResult.SupportedOperations.Add(pO);
+
+              searchResult.SupportedOperations.Add(cO);
+
+              searchResult.FocusedOperation = pO;
+
+
+              return true;
+          version: 1.0.0.0
+          position:
+            x: 908
+            y: 1813
+          variables:
+          - name: csharpScriptResult
+            value: result
+          children: []
+          comment: ''
+        comment: ''
+      - id: 16
+        version: 1.0.0.0
+        comment: ''
+      comment: ''
+    comment: ''
+  comment: ''
+- id: 1
+  version: 1.0.0.0
+  comment: ''
+- id: 11
+  version: 1.0.0.0
+  comment: ''
+- id: 6
+  version: 1.0.0.0
+  comment: ''
+- id: 12
+  version: 1.0.0.0
+  comment: ''
